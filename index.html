@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO Meta Tags -->
+    <title>Venture Website</title>
+    <meta
+      name="description"
+      content="A brief but compelling description of your website, around 150-160 characters."
+    />
+    <meta name="keywords" content="relevant, keywords, separated, by, commas" />
+    <meta name="author" content="Your Name or Company" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Your Website Title" />
+    <meta
+      property="og:description"
+      content="A brief but compelling description of your website."
+    />
+    <meta property="og:image" content="https://example.com/image.jpg" />
+    <meta property="og:url" content="https://example.com" />
+    <meta property="og:site_name" content="Your Website Name" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Your Website Title" />
+    <meta
+      name="twitter:description"
+      content="A brief but compelling description of your website."
+    />
+    <meta name="twitter:image" content="https://example.com/image.jpg" />
+    <meta name="twitter:site" content="@YourTwitterHandle" />
+    <meta name="twitter:creator" content="@YourTwitterHandle" />
+
+    <!-- Favicon & Apple Icons -->
+    <link rel="icon" href="assets/media/images/Logogram.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Start::Global Styles (used by all pages) -->
+    <link
+      href="assets/css/styles.bundle.css"
+      rel="stylesheet"
+      type="text/css"
+      
+    />
+    <!-- End::Global Styles -->
+    <!-- Start::Page Styles (used by this page) -->
+    <link
+      href="assets/css/pages/home-v1.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- End::Page Styles -->
+
+    <!-- Style css -->
+     <link rel="stylesheet" href="assets/scss/styles.css">
+          <link rel="stylesheet" href="assets/scss/styles.css.map">
+    <!-- end Style css -->
+
+        <!-- import font  -->
+         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+  </head>
+  <body>
+   
+<!-- Navbar Here -->
+<div class="page-wrapper">
+  <nav class="navbar">
+    <div class="navbar__container">
+      <!-- Logo -->
+      <a href="index.html" class="navbar__logo">
+  <img src="assets/media/images/Webclip.png" alt="Venture Logo" />
+  <span class="navbar__brand">Venture</span>
+</a>
+      <!-- Desktop Menu -->
+      <ul class="navbar__menu">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+      </ul>
+      <!-- Actions (desktop only) -->
+      <div class="navbar__actions">
+        <a href="#" class="navbar__login">Log In</a>
+        <a href="#" class="btn--black">Get Started</a>
+      </div>
+      <!-- Burger (mobile only) -->
+      <div class="navbar__burger" id="burger">&#9776;</div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="navbar__mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<script>
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  burger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+  });
+</script>
+    </div>
+  </nav>
+</div>
+<!-- Navbar End -->
+<!-- Hero Section -->
+<section class="hero reveal-on-scroll" aria-label="Hero Section">
+  <div class="hero__container">
+    <div class="hero__text">
+      <h1 class="hero__title"> 
+        Revoluzioned <br />
+        <span>Customer Relationship</span>
+      </h1>
+      <p class="hero__desc">
+        Streamline Operations, Boost Efficiency, and Drive Growth
+      </p>
+      <div class="hero__buttons">
+        <a href="#" class="btn btn--primary">Get Started</a>
+        <a href="#" class="btn btn--outline">Learn More</a>
+      </div>
+      <p class="hero__note">
+        Used and helping over <strong>200+ Companies</strong>
+      </p>
+    </div>
+    <div class="hero__image reveal-on-scroll">
+      <img src="assets/media/images/parent dokumen.webp" alt="Dashboard UI" loading="lazy" />
+    </div>
+  </div>
+</section>
+<!--Hero end-->
+<!--BAgian social-->
+      <section class="social-proof">
+    <div class="container">
+      <div class="text">
+        <h2 class="title">Trusted by Many<br>Established Companies</h2>
+        <p class="subtitle">20+ Businesses and Companies uses Converge<br>for their CRM Platform</p>
+      </div>
+      <div class="logos">
+        <img src="assets/media/images/coinbase.webp" alt="Coinbase">
+        <img src="assets/media/images/dropboc.webp"  alt="Dropbox">
+        <img src="assets/media/images/gogle.webp" alt="Google">
+        <img src="assets/media/images/slack.webp" alt="Slack">
+        <img src="assets/media/images/square.webp" alt="Square">
+        <img src="assets/media/images/zoom.webp" alt="Zoom">
+      </div>
+    </div>
+  </section>
+<!--Social End-->
+  <!--Features play-->
+<section class="features">
+      <div class="feature">
+        <div class="feature__image">
+          <img src="assets/media/images/effortles custommer.webp" alt="CRM Management" />
+        </div>
+        <div class="feature__content">
+          <h3>Effortless Customer Relationship Management</h3>
+          <p>Simplify campaigns, track, and access all customer information, transactions, and communications in one user-friendly platform.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+      <div class="feature reverse">
+        <div class="feature__image">
+          <img src="assets/media/images/email custom.webp" alt="Email Integration" />
+        </div>
+        <div class="feature__content">
+          <h3>Dynamic Email <br >Integration Excellence</h3>
+          <p>Simplify your workflow with essential email integrations. Send, track, centralize messages and gain insights tailored for business expansion.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature__image">
+          <img src="assets/media/images/echanteam.webp" alt="Team Collaboration" />
+        </div>
+        <div class="feature__content">
+          <h3>Enhanced Team Collaboration</h3>
+          <p>Foster teamwork and seamless collaboration with our CRM-integrated tools for task assignments.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+      <div class="feature reverse">
+        <div class="feature__image">
+          <img src="assets/media/images/data  driverm.webp" alt="Insights Optimization" />
+        </div>
+        <div class="feature__content">
+          <h3>Data-Driven Insights and Strategy Optimization</h3>
+          <p>Unlock your data's full potential. Track, measure, and extract valuable CRM insights to optimize your business strategies.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+    </section>
+<!--Features End-->
+<!-- Advantages Play -->
+<section class="section advantages-section">
+  <div class="container">
+    <h2 class="section-title">Advantage of Venture as Your CRM Platform</h2>
+    <!-- Wrapper baru -->
+    <div class="subtitle-controls">
+      <p class="section-subtitle">
+        Here are some reasons about why you should choose Venture as your CRM.
+      </p>
+      <div class="carousel-controls">
+        <button class="carousel-button left" aria-label="Previous">&#10094;</button>
+        <button class="carousel-button right" aria-label="Next">&#10095;</button>
+      </div>
+    </div>
+    <!--Bagian gambar-->
+<div class="carousel-track">
+  <div class="carousel-slide">
+    <div class="image-wrapper">
+      <img src="assets/media/images/effort dataa.webp" alt="CRM Screenshot 1" />
+      <div class="slide-caption">
+        <h3>Effortless Data Management:</h3>
+        <p>Simplify centralizing customer data for easy access, updates, and analysis, providing a comprehensive clientele overview.</p>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-slide">
+    <div class="image-wrapper">
+      <img src="assets/media/images/contact managements.webp" alt="CRM Screenshot 2" />
+      <div class="slide-caption">
+        <h3>Contact Management</h3>
+        <p>Easily organize and track all contacts in one place, with categorized and updated details for top-notch customer service.</p>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-slide">
+    <div class="image-wrapper">
+      <img src="assets/media/images/effort dataa.webp" alt="CRM Screenshot 3" />
+      <div class="slide-caption">
+        <h3>Enhanced Customer Insights:</h3>
+        <p>Enhance customer understanding with advanced CRM analytics, delving deeper into preferences and behaviors</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<script>
+  const track = document.querySelector('.carousel-track');
+  const slides = document.querySelectorAll('.carousel-slide');
+  const btnPrev = document.querySelector('.carousel-button.left');
+  const btnNext = document.querySelector('.carousel-button.right');
+  let index = 0;
+  function updateCarousel() {
+    const slideWidth = slides[0].clientWidth;
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+  }
+
+  btnNext.addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    updateCarousel();
+  });
+
+  btnPrev.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    updateCarousel();
+  });
+
+  window.addEventListener('resize', updateCarousel);
+  window.addEventListener('load', updateCarousel);
+</script>
+<!--Advantages end-->
+<!-- Integration PLay -->
+ <section class="integration">
+  <div class="integration__container">
+    <!-- Kartu Integrasi Aplikasi -->
+    <div class="integration__card">
+      <h3 class="integration__title">Integrated with 60+ Apps</h3>
+      <p class="integration__desc">
+        Embark on a transformative journey with our venture. Over 60 powerful tools to make your work more efficient and effective.
+      </p>
+<a href="#app-integrations" class="integration__button">View All App Integration</a>
+      <div class="integration__image-wrapper">
+        <img src="assets/media/images/gambar aaplikasi.webp" alt="Integrated Apps">
+      </div>
+    </div>
+    <!-- Kartu Sertifikasi Keamanan -->
+    <div class="integration__card">
+      <h3 class="integration__title">We’re Aware with Security</h3>
+      <p class="integration__desc">
+        Venture is audited and certified by few industry that have been leading in Security Third Party standards.
+      </p>
+<a href="#" class="integration__button">Discover More</a>
+      <div class="integration__image-wrapper">
+        <img src="assets/media/images/app ima.webp" alt="Security Certifications">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimoni -->
+<section class="testimonials-section">
+  <div class="container">
+    <h2 class="section-heading">Used by more than 10K+ Business</h2>
+    <p class="section-subheading">Hear what they say about Venture and why you should choose Venture</p>
+    <!-- ROW 1 -->
+    <div class="fade-mask">
+      <div class="testimonial-row scroll-left">
+        <!-- semua .testimonial-card row 1 di sini -->
+      <div class="testimonial-card">
+ <div class="stars">
+  <!-- 4 bintang hitam -->
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+
+  <!-- Bintang ke-5 setengah -->
+  <svg class="star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="half-black-grey" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="50%" stop-color="#000" />
+        <stop offset="50%" stop-color="#999" />
+      </linearGradient>
+    </defs>
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" fill="url(#half-black-grey)" />
+  </svg>
+</div>
+        <p>Since implementing this CRM,our sales have increased by 30% in just three months.It's become an integra... </p>
+        <div class="profile">
+          <img src="assets/media/images/Marx Hershey.png" alt="Marx Hershey" />
+          <div class="info">
+            <strong>Marx Hershey</strong>
+            <span>Project Manager</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+       <div class="stars">
+  <!-- 4 bintang hitam -->
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+
+  <!-- Bintang ke-5 setengah -->
+  <svg class="star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="half-black-grey" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="50%" stop-color="#000" />
+        <stop offset="50%" stop-color="#999" />
+      </linearGradient>
+    </defs>
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" fill="url(#half-black-grey)" />
+  </svg>
+</div>
+        <p>This CRM has transformed how we interact with our customers. The marketing automation and customer...</p>
+        <div class="profile">
+          <img src="assets/media/images/tyra dhylon.png" alt="Courtney Henry" />
+          <div class="info">
+            <strong>Tyra Dhillon</strong>
+            <span>Software Tester</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+       <div class="stars">
+  <!-- 4 bintang hitam -->
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+
+  <!-- Bintang ke-5 setengah -->
+  <svg class="star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="half-black-grey" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="50%" stop-color="#000" />
+        <stop offset="50%" stop-color="#999" />
+      </linearGradient>
+    </defs>
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" fill="url(#half-black-grey)" />
+  </svg>
+</div>
+        <p>I was looking for a CRM that was easy to use and could adapt to my business.This CRM has exceeded m...</p>
+        <div class="profile">
+          <img src="assets/media/images/courtney henry.png" alt="Floyd Miles" />
+          <div class="info">
+            <strong>Courtney Henry</strong>
+            <span>UI/UX Designer</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+ <div class="stars">
+  <!-- 4 bintang hitam -->
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+
+  <!-- Bintang ke-5 setengah -->
+  <svg class="star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="half-black-grey" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="50%" stop-color="#000" />
+        <stop offset="50%" stop-color="#999" />
+      </linearGradient>
+    </defs>
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" fill="url(#half-black-grey)" />
+  </svg>
+</div>
+        <p>The sales pipeline and automation tools have been a massive time-saver. We can now manage leads and deals </p>
+        <div class="profile">
+          <img src="assets/media/images/marvin.png" alt="Marvin" />
+          <div class="info">
+            <strong>Marvin McKinney</strong>
+            <span>Team Leader</span>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+    <!-- ROW 2 -->
+    <div class="fade-mask">
+      <div class="testimonial-row scroll-right">
+        <!-- semua .testimonial-card row 2 di sini -->
+<div class="testimonial-card">
+<div class="stars">
+  <!-- 4 bintang hitam -->
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+
+  <!-- Bintang ke-5 setengah -->
+  <svg class="star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="half-black-grey" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="50%" stop-color="#000" />
+        <stop offset="50%" stop-color="#999" />
+      </linearGradient>
+    </defs>
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" fill="url(#half-black-grey)" />
+  </svg>
+</div>
+<p>The reports generated by this CRM have allowed us to track and measure our performance better than ever. Iy..</p>   
+     <div class="profile">
+          <img src="assets/media/images/roselle.png" alt="Marx Hershey" />
+          <div class="info">
+            <strong>Roselle Ehrman</strong>
+            <span>Software Developer</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+    <div class="stars">
+  <!-- 4 bintang hitam -->
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+
+  <!-- Bintang ke-5 setengah -->
+  <svg class="star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="half-black-grey" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="50%" stop-color="#000" />
+        <stop offset="50%" stop-color="#999" />
+      </linearGradient>
+    </defs>
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" fill="url(#half-black-grey)" />
+  </svg>
+</div>
+        <p>The ability to segment customers and personalize our marketing campaigns has led to a significant increase in co..
+        </p>
+        <div class="profile">
+          <img src="assets/media/images/floyd.png" alt="Laszlo Gueirero" />
+          <div class="info">
+            <strong>Floyd Miles</strong>
+            <span>Software Development Manager</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+       <div class="stars">
+  <!-- 4 bintang hitam -->
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+
+  <!-- Bintang ke-5 setengah -->
+  <svg class="star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="half-black-grey" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="50%" stop-color="#000" />
+        <stop offset="50%" stop-color="#999" />
+      </linearGradient>
+    </defs>
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" fill="url(#half-black-grey)" />
+  </svg>
+</div>
+       <p>
+Our customer support has become more organized and efficient with this CRM. The ticketing system and kno..        </p>
+        <div class="profile">
+          <img src="assets/media/images/laurale.png" alt="Kyle Everford" />
+          <div class="info">
+            <strong>Lauralee Quintero</strong>
+            <span>Scrum Master</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+   <div class="stars">
+  <!-- 4 bintang hitam -->
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+
+  <!-- Bintang ke-5 setengah -->
+  <svg class="star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="half-black-grey" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="50%" stop-color="#000" />
+        <stop offset="50%" stop-color="#999" />
+      </linearGradient>
+    </defs>
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" fill="url(#half-black-grey)" />
+  </svg>
+</div>
+        <p>
+The collaboration features in this CRM have greatly improved how our teams work together. Sharing information an</p>
+    <div class="profile">
+          <img src="assets/media/images/kyleee.png" alt="Rochelle Evans" />
+          <div class="info">
+            <strong>Kylee Danford</strong>
+            <span>Ethical Hacker</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+<div class="stars">
+  <!-- 4 bintang hitam -->
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+
+  <!-- Bintang ke-5 setengah -->
+  <svg class="star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="half-black-grey" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="50%" stop-color="#000" />
+        <stop offset="50%" stop-color="#999" />
+      </linearGradient>
+    </defs>
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" fill="url(#half-black-grey)" />
+  </svg>
+</div>
+        <p>
+This CRM seamlessly integrated with our existing systems. The implementation was a breeze, and it'</p>
+        <div class="profile">
+          <img src="assets/media/images/dianne.png" alt="Jason Bell" />
+          <div class="info">
+            <strong>Dianne Russell</strong>
+            <span>Scrum Master</span>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+    <!-- ROW 3 -->
+    <div class="fade-mask">
+      <div class="testimonial-row scroll-left">
+        <!-- semua .testimonial-card row 3 di sini -->
+ <div class="testimonial-card">
+     <div class="stars">
+  <!-- 4 bintang hitam -->
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+
+  <!-- Bintang ke-5 setengah -->
+  <svg class="star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="half-black-grey" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="50%" stop-color="#000" />
+        <stop offset="50%" stop-color="#999" />
+      </linearGradient>
+    </defs>
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" fill="url(#half-black-grey)" />
+  </svg>
+</div>
+        <p>
+This CRM has transformed how we interact with our customers. The marketing automation and customer...        </p>
+        <div class="profile">
+          <img src="assets/media/images/tyra dhylon.png" alt="Marvin McKinney" />
+          <div class="info">
+            <strong>Tyra Dhillon</strong>
+            <span>Software Tester</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+<div class="stars">
+  <!-- 4 bintang hitam -->
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+
+  <!-- Bintang ke-5 setengah -->
+  <svg class="star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="half-black-grey" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="50%" stop-color="#000" />
+        <stop offset="50%" stop-color="#999" />
+      </linearGradient>
+    </defs>
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" fill="url(#half-black-grey)" />
+  </svg>
+</div>
+        <p>
+Since implementing this CRM,our sales have increased by 30% in just three months.It's become an integra...
+</p>        <div class="profile">
+          <img src="assets/media/images/Marx Hershey.png" alt="Nina Roberts" />
+          <div class="info">
+            <strong>Marx Hershey</strong>
+            <span>Project Manager</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+<div class="stars">
+  <!-- 4 bintang hitam -->
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+
+  <!-- Bintang ke-5 setengah -->
+  <svg class="star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="half-black-grey" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="50%" stop-color="#000" />
+        <stop offset="50%" stop-color="#999" />
+      </linearGradient>
+    </defs>
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" fill="url(#half-black-grey)" />
+  </svg>
+</div>
+        <p>
+The sales pipeline and automation tools have been a massive time-saver. We can now manage leads and deals         </p>
+        <div class="profile">
+          <img src="assets/media/images/marvin.png" alt="Leon Hodge" />
+          <div class="info">
+            <strong>Marvin McKinney</strong>
+            <span>Team Leader</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+<div class="stars">
+  <!-- 4 bintang hitam -->
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+  <svg class="star" viewBox="0 0 24 24" fill="#000" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" />
+  </svg>
+
+  <!-- Bintang ke-5 setengah -->
+  <svg class="star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="half-black-grey" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="50%" stop-color="#000" />
+        <stop offset="50%" stop-color="#999" />
+      </linearGradient>
+    </defs>
+    <polygon points="12,2 15,9 22,9 17,14 18.5,21 12,17 5.5,21 7,14 2,9 9,9" fill="url(#half-black-grey)" />
+  </svg>
+</div>
+        <p>
+The reports generated by this CRM have allowed us to track and measure our performance better than ever. It's          .</p>
+        <div class="profile">
+          <img src="assets/media/images/roselle.png" alt="Claire Riley" />
+          <div class="info">
+            <strong>Roselle Ehrman</strong>
+            <span>Software Developer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  // Gandakan isi tiap baris agar animasi tidak berhenti
+  document.querySelectorAll('.testimonial-row').forEach(row => {
+    const clone = row.innerHTML;
+    row.innerHTML += clone;
+  });
+</script>
+
+
+<!--bagian play cta -->
+<section class="cta-section">
+ <div class="background-section"><img src="https://cdn.prod.website-files.com/66417419144b0abb506b10c6/66430cd242dcd47f12bf26c9_Background%20CTA.webp" loading="eager" sizes="100vw" srcset="https://cdn.prod.website-files.com/66417419144b0abb506b10c6/66430cd242dcd47f12bf26c9_Background%20CTA-p-500.png 500w, https://cdn.prod.website-files.com/66417419144b0abb506b10c6/66430cd242dcd47f12bf26c9_Background%20CTA-p-800.png 800w, https://cdn.prod.website-files.com/66417419144b0abb506b10c6/66430cd242dcd47f12bf26c9_Background%20CTA-p-1080.png 1080w, https://cdn.prod.website-files.com/66417419144b0abb506b10c6/66430cd242dcd47f12bf26c9_Background%20CTA-p-1600.png 1600w, https://cdn.prod.website-files.com/66417419144b0abb506b10c6/66430cd242dcd47f12bf26c9_Background%20CTA-p-2000.png 2000w, https://cdn.prod.website-files.com/66417419144b0abb506b10c6/66430cd242dcd47f12bf26c9_Background%20CTA-p-2600.png 2600w, https://cdn.prod.website-files.com/66417419144b0abb506b10c6/66430cd242dcd47f12bf26c9_Background%20CTA-p-3200.png 3200w, https://cdn.prod.website-files.com/66417419144b0abb506b10c6/66430cd242dcd47f12bf26c9_Background%20CTA.webp 5760w" alt="" class="image-full cover"/></div>
+    <div class="cta-container">
+      <h2 class="cta-title">Take Your Business to the Next Level</h2>
+      <p class="cta-subtitle">
+        Dive into the advantages of our CRM platform and witness the impact on your business.
+      </p>
+      <div class="cta-buttons">
+        <a href="#" class="cta-btn primary">Get Started</a>
+        <a href="#" class="cta-btn link">Request a Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!--Bagian Footer-->
+  <footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">
+          <img src="assets/media/images/ventureeeeeee logo.svg" alt="Venture Logo" />
+        </div>
+      <div class="socials">
+  <a href="#"><img src="assets/media/images/iggg.svg" alt="Instagram" /></a>
+  <a href="#"><img src="assets/media/images/fbek.svg" alt="Facebook" /></a>
+  <a href="#"><img src="assets/media/images/in.jpg" alt="LinkedIn" /></a>
+  <a href="#"><img src="assets/media/images/twitter.png" alt="Twitter" /></a>
+</div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Pages</h4>
+          <a href="#">About Us</a>
+          <a href="#">Features</a>
+          <a href="#">Product</a>
+          <a href="#">Pricing</a>
+        </div>
+        <div class="footer-column">
+          <h4>Company</h4>
+          <a href="#">Careers</a>
+          <a href="#">Guide</a>
+          <a href="#">Startup Program</a>
+        </div>
+        <div class="footer-column">
+          <h4>Support</h4>
+          <a href="#">Help Center</a>
+          <a href="#">Customer Support</a>
+          <a href="#">API Docs</a>
+          <a href="#">System Status</a>
+        </div>
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <a href="#">FAQ</a>
+          <a href="#">Blog</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© Designed by <span>Illiyin Studio</span>. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Start::Global Bundle Scripts (used by all pages) -->
+    <script src="assets/js/scripts.bundle.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const reveals = document.querySelectorAll(".reveal-on-scroll");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          observer.unobserve(entry.target); // agar hanya 1x animasi
+        }
+      });
+    }, { threshold: 0.2 });
+
+    reveals.forEach(el => observer.observe(el));
+  });
+</script>
+
+
+</script>
+    <!-- End::Global Bundle Scripts -->
+    <!-- Start::Page Scripts (used by this page) -->
+    <script src="assets/js/pages/home.js"></script>
+    <!-- End::Page Scripts -->
+  </body>
+</html>

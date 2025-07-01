@@ -1,0 +1,43 @@
+
+var ftGUID_9116301="6325D09BFFEF06";
+var ftConfID_9116301="0";
+var ftParams_9116301="ftOBA=1&ft_agentEnv=0&ft_referrer=https://symbolsdb.com/star-symbol;https%3A%2F%2Fsymbolsdb.com%2Fstar-symbol&us_privacy=${US_PRIVACY}&ft_partnerimpid=ABAjH0hYeoTAKoSAfftE61qiWmyX;ABAjH0hYeoTAKoSAfftE61qiWmyX&site_url=https://symbolsdb.com/star-symbol&pub_id=1&sup_platform=1&cachebuster=619542.1362211771&ft_keyword=DV360CampID:__21343824124__&ft_section=DV360CampID:21343824124";
+var ftKeyword_9116301="";
+var ftCustom_9116301="";
+var ftSection_9116301="DV360CampID:21343824124";
+var ftSegment_9116301="";
+var ftSegmentList_9116301=[];
+var ftRuleMatch_9116301="0";
+var ftTimestamp_9116301="1750686455";
+var ftGeoC2_9116301="id";
+var ftGeoState_9116301="ji";
+var ftGeoCity_9116301="tajinan";
+var ftISP_9116301="pt nanaka network communication";
+var ftSpeed_9116301="broadband";
+var ftConnType_9116301="wifi";
+var ftDMA_9116301="360261";
+var ftLong_9116301="112.69";
+var ftLat_9116301="-8.05";
+var ftPostal_9116301="65172";
+var ftTimeZone_9116301="+700";
+var ftMobileCarrier_9116301="";
+var ftImp9116301 = {};
+ftImp9116301.privacy = "x";
+ftImp9116301.guidAge = "58";
+ftImp9116301.impID = "3F58AE7F-61D7-2DF8-0545-31C99C105D04";
+ftImp9116301.duid = "FT:6325D09BFFEF06";
+
+ftImp9116301.ft_tpplid = "";
+ftImp9116301.ft_c = {};
+ftImp9116301.gdpr = "";
+ftImp9116301.gdpr_consent = "";
+ftImp9116301.gdpr_pd = "";
+ftImp9116301.oob_consent = "";
+ftImp9116301.gdprStoredConsent = "";
+ftImp9116301.us_privacy = "!!US_PRIVACY!";
+ftImp9116301.gpc = "";
+
+ftImp9116301.jsAppend = "1";
+var ftCreativeId_9116301 = "5170250";
+(function(){var tag=document.getElementById("ft_servedby_9116301")||function(s){return s[s.length-1]}(document.getElementsByTagName("script")),js=document.createElement("script");js.src="https://ajs-assets.ftstatic.com/ftUtils.js";js.id="ftscript_m9116301";js.setAttribute("name","ftscript_m9116301");tag.parentNode.insertBefore(js,tag)})();window.fTChecker=window.fTChecker||function(id){if(!id)return false;id=""+id;if(window.hasOwnProperty("ftUtils")){window["ft"+id]=Object.assign({},window.ftUtils.common);window["ft"+id].getBannerConfig(id)}else(function(id){window.setTimeout(function(){window.fTChecker(id)},50)})(id)};window.fTChecker("9116301");
+

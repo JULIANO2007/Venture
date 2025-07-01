@@ -1,0 +1,57 @@
+/*
+This file was modified by the Flashtalking Service Suite
+Version: 2.5.2
+Tool: adrepair
+Date: October 9, 2024 at 16:12:34
+Options Selected: {"alwaysClickTag":false,"multipleClickTag":false,"standardAd":false}
+Logged Changes: f_nom
+*/
+html {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  -webkit-user-select: none;
+          user-select: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fullscreen {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 728px;
+  height: 90px;
+}
+
+.border {
+  border: 1px solid #000000;
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  width: 728px;
+  height: 90px;
+  font-family: AdobeCleanBlack;
+  background-color: #EB1000;
+}
+
+.content {
+  opacity: 0;
+}
+
+.mainExit {
+  cursor: pointer;
+}

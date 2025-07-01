@@ -1,0 +1,39 @@
+/*
+This file was modified by the Flashtalking Service Suite
+Version: 2.5.2
+Tool: adrepair
+Date: October 9, 2024 at 16:12:34
+Options Selected: {"alwaysClickTag":false,"multipleClickTag":false,"standardAd":false}
+Logged Changes: f_nom
+*/
+@font-face {
+  font-family: AdobeClean-Bold;
+  src: url(AdobeClean-Bold_c4a8cdb3d8d85fd0329de6e678e401a6.woff) format('woff'),
+  url(AdobeClean-Bold_af950cde8cb73a353b5f54e6ffc1f767.woff2) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: AdobeClean-ExtraBold;
+  src: url('../fonts/AdobeClean-ExtraBold.woff') format('woff'),
+  url('../fonts/AdobeClean-ExtraBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: AdobeCleanBlack;
+  src: url(AdobeCleanBlack_1cb6c6394c9cf0ae97096c8ea546b6a1.woff) format('woff'),
+  url(AdobeCleanBlack_15b7f090aee2856ed791cc5943386246.woff2) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: AdobeCleanRegular;
+  src: url(AdobeClean-Regular_c80f0952658a1ed1820d22fbd9077949.woff) format('woff'), 
+  url(AdobeClean-Regular_8a811b4d1601367843508f0960ba1b56.woff2) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
