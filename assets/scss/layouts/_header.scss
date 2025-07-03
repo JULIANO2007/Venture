@@ -88,7 +88,7 @@ html, body {
     }
 
 
-//resposnive
+//resposnive Tablet Navigasi
     
     @media (max-width: 768px)
     
@@ -270,7 +270,7 @@ html, body {
   }
 }
 
-// mobile M
+// mobile responsive M
 @media (max-width: 375px) {
   .navbar__container {
     padding: 14px 20px; // ✅ Lebih rapat di kiri-kanan
@@ -308,7 +308,7 @@ html, body {
 }
 
 
-// responsive mobile s
+// responsive mobile S
 @media (max-width: 320px) {
   .navbar__container {
     padding: 12px 16px; // ✅ padding kiri-kanan makin sempit
@@ -509,7 +509,7 @@ html, body {
   }
 }
 
-//hero tablet//
+// Responsive Tablet Hero
 @media (max-width: 1024px) {
   .hero {
     padding-top: 60px; // lebih ramping di tablet
@@ -538,7 +538,7 @@ html, body {
   }
 }
 
-//* responsif hp
+//* responsif hp Hero
 @media (max-width: 768px) {
   .hero {
     padding-top: 50px; //  Padding atas dikurangi agar hemat ruang di layar kecil
@@ -588,7 +588,7 @@ html, body {
   }
 }
 
-//* responsif tombol untuk HP kecil
+//* responsif hero tombol untuk HP kecil
 @media (max-width: 768px) {
   .hero__buttons {
     width: 100%; // Lebar penuh untuk seluruh tombol
@@ -693,9 +693,9 @@ html, body {
     }
   }
 
-  // Tablet
+  // Responsive Sosial Tablet
 @media (max-width: 1024px) {
-  padding: 64px 40px; //  Kurangi padding agar konten lebih rapat dan tidak terlalu lebar di layar tablet
+    padding-top: 50px; //  Padding atas dikurangi agar hemat ruang di layar kecil
 
   .container {
     flex-direction: column; //  Layout berubah dari horizontal menjadi vertikal (stacked) agar cocok dengan layar sempit
@@ -723,9 +723,11 @@ html, body {
   }
 
   .logos {
-    grid-template-columns: repeat(2, auto); //  Logo dibagi jadi 2 kolom saja agar tidak terlalu kecil
-    gap: 24px; //  Jarak antar logo juga dikecilkan agar lebih hemat ruang
-  }
+  display: flex; // ubah dari grid ke flex
+  justify-content: flex-start; // untuk align logo ke kanan
+  flex-wrap: wrap; // supaya logo bisa turun ke baris berikutnya jika sempit
+  gap: 24px; // jarak antar logo
+}
 }
 }
 //* Bagian Feanture 
@@ -861,38 +863,60 @@ html, body {
 }
 
 // Responsive mobile
-@media (max-width: 640px) {
-  padding: 72px 24px; //  Padding lebih kecil lagi agar muat di layar HP
-  gap: 48px; //  Jarak antar fitur semakin pendek agar efisien di layar kecil
+@media (max-width: 640px){
+  .social-proof {
+    padding: 48px 24px; // pastikan social dan features punya padding yang sama
+  }
+  .features {
+    padding: 48px 24px; // disamakan dengan .social-proof
+    gap: 40px; // jarak antar feature di mobile
+  }
+  .features .feature,
+  .features .feature.reverse {
+    flex-direction: column; // stack vertikal
+    align-items: flex-start; // teks rata kiri
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 32px; // jarak antar image dan konten
+  }
 
-  .feature,
-  .feature.reverse {
-    flex-direction: column; //  Stack layout tetap digunakan di HP
-    text-align: left; //  Patikan teks tetap rata kiri
+  .features .feature__image,
+  .features .feature__content {
+    width: 100%;
+    max-width: 100%;
+  }
 
-    &__content {
-      order: 1; //  Konten tetap di atas
+  .features .feature__image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; // center image secara horizontal
+  }
 
-      h3 {
-        font-size: 24px; //  Heading lebih kecil untuk HP
-        line-height: 1.4; //  Spasi baris cukup
-        letter-spacing: -0.4px; //  Huruf tetap rapat untuk menjaga tampilan
-      }
+  .features .feature__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 
-      p {
-        font-size: 15px; //  Ukuran teks tetap nyaman dibaca
-        line-height: 1.6; //  Spasi baris tetap dijaga
-        letter-spacing: 0; //  Normal spacing
-      }
+  .features .feature__content h3 {
+    font-size: 24px;
+    line-height: 1.4;
+    letter-spacing: -0.4px;
+    text-align: left;
+    margin: 0;
+  }
 
-      .btn {
-        font-size: 14px; //  Ukuran tombol diperkecil agar pas di layar kecil
-      }
-    }
+  .features .feature__content p {
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: left;
+    margin: 0;
+  }
 
-    &__image {
-      order: 2; //  Gambar tetap berada setelah teks
-    }
+  .features .feature__content .btn {
+    font-size: 14px;
   }
 }
 }
@@ -1090,15 +1114,54 @@ html, body {
     }
   }
 }
-
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .advantages-section {
-    .section-title {
-      font-size: 24px;
+    padding: 80px 24px;
+
+    .container {
+      padding: 0 24px;
     }
 
-    .section-subtitle {
-      font-size: 14px;
+    .section-title {
+      width: 100%;
+      font-size: 28px;
+      line-height: 130%;
+      text-align: left;
+    }
+
+    .subtitle-controls {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+
+      .section-subtitle {
+        width: 100%;
+        font-size: 16px;
+        text-align: left;
+      }
+
+      .carousel-controls {
+        align-self: flex-end;
+      }
+    }
+
+    .carousel-slide {
+      padding: 0;
+      margin-left: 0;
+      width: 100%;
+  margin-right: 16px;
+    }
+
+    .image-wrapper {
+      max-width: 100%;
+      padding: 12px;
+      box-sizing: border-box;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
     }
 
     .slide-caption {
@@ -1131,6 +1194,7 @@ html, body {
   min-height: 500px;
     width: 100%; //  Ikuti lebar parent
     justify-content: space-between; //  Sebar elemen secara merata
+
   }
 
   &__card {
@@ -1223,63 +1287,143 @@ html, body {
     }
   }
 }
-
+// responsive tablet kecil
 @media (max-width: 768px) {
   .integration {
-    padding: 40px 24px; //  Padding lebih kecil untuk tablet & HP
+    padding: 32px 16px;
 
     &__container {
-      flex-direction: column; //  Susun ke bawah (vertikal)
-      align-items: center; //  Pusatkan elemen secara horizontal
+      flex-wrap: wrap; // ✅ Tetap dua kolom kalau cukup ruang
+      justify-content: center;
+      gap: 20px;
+      align-items: stretch;
     }
 
     &__card {
-      width: 100%; //  Lebar penuh kontainer
-      max-width: 100%; //  Hindari batas ukuran
-      padding: 28px 24px; //  Padding dalam kartu dikurangi
+      width: 100%;
+      max-width: 360px; // ✅ Biarkan 2 kartu sejajar dalam 768px
+      padding: 24px 20px;
+      height: auto; // ✅ Biarkan fleksibel
     }
 
     &__title {
-      font-size: 24px; //  Ukuran teks judul diperkecil
+      font-size: 22px;
     }
 
     &__desc {
-      font-size: 14px; //  Ukuran teks deskripsi tetap agar masih terbaca
+      font-size: 14px;
+      line-height: 1.4;
+      min-height: 48px;
     }
 
     &__button {
-      width: 100%; //  Tombol isi lebar kartu
-      max-width: 280px; //  Batas maksimal agar tetap proporsional
-      font-size: 15px; //  Ukuran font disesuaikan dengan layar
+      width: 100%;
+      max-width: 240px;
+      font-size: 14px;
+      padding: 8px 14px;
+      align-self: center;
     }
 
     &__image-wrapper {
-      width: 100%; //  Gambar isi penuh kartu
-      margin-left: 0; //  Hilangkan margin kiri
-      margin-right: 0; //  Hilangkan margin kanan
+      width: 100%;
+      margin: 16px 0 0 0;
     }
   }
 }
 
 @media (max-width: 480px) {
   .integration {
-    padding: 32px 16px; //  Padding paling kecil untuk mobile kecil
+    padding: 32px 16px;
+
+    &__container {
+      flex-direction: column; // ✅ Susun ke bawah
+      align-items: center;
+      gap: 20px; // ✅ Jarak antar kartu
+    }
+
+    &__card {
+      width: 100%;
+      max-width: 100%; // ✅ Hindari batas
+      padding: 20px 16px; // ✅ Padding ringkas
+    }
 
     &__title {
-      font-size: 20px; //  Ukuran judul lebih kecil agar muat di layar kecil
+      font-size: 20px;
+      line-height: 1.3;
+      margin-bottom: 8px;
     }
 
     &__desc {
-      font-size: 13px; //  Ukuran deskripsi lebih kecil agar tetap pas
+      font-size: 13px;
+      line-height: 1.5;
+      min-height: auto;
+      text-align: center; // ✅ Tambahkan kalau kamu ingin teks tetap rata tengah
     }
 
     &__button {
-      font-size: 14px; //  Ukuran teks tombol disesuaikan
-      height: 40px; //  Tombol sedikit lebih kecil
-      padding: 8px 12px; //  Ruang dalam tombol dikurangi
+      width: 100%;
+      max-width: 100%;
+      font-size: 14px;
+      height: 40px;
+      padding: 8px 12px;
+      margin-top: 16px;
+      align-self: center;
+    }
+
+    &__image-wrapper {
+      width: 100%;
+      margin: 16px 0 0 0;
     }
   }
 }
+
+// responsive laptop kecil
+@media (max-width: 1024px) {
+  .integration {
+    padding: 40px 24px;
+
+    &__container {
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      align-items: stretch;
+    }
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 480px; // ✅ Kartu konsisten tingginya
+      max-width: 460px;
+      padding: 28px 20px;
+    }
+
+    &__title {
+      font-size: 26px;
+    }
+
+    &__desc {
+      font-size: 15px;
+      line-height: 1.5;
+      min-height: 54px;
+      margin-bottom: 12px;
+    }
+
+    &__button {
+      width: 100%;
+      max-width: 240px;
+      font-size: 15px;
+      padding: 8px 16px;
+      align-self: center; // ✅ Tengahin tombol
+    }
+
+    &__image-wrapper {
+      margin-top: 20px; // ✅ Jarak dari tombol
+      width: 100%;
+    }
+  }
+}
+
 
 
 // testimoni play
@@ -1331,6 +1475,7 @@ html, body {
 
     &.scroll-left {
       animation-name: scrollLeft;
+
     }
 
     &.scroll-right {
@@ -1482,7 +1627,7 @@ html, body {
       object-fit: cover; //  Potong gambar agar menutupi area
       object-position: center; //  Pusatkan gambar
       display: block; //  Hilangkan inline spacing
-                  object-fit: contain; // ✅ Gambar akan masuk seluruhnya tanpa terpotong
+                  object-fit: contain; //  Gambar akan masuk seluruhnya tanpa terpotong
       pointer-events: none; //  Supaya tidak bisa diklik
     }
   }
@@ -1674,7 +1819,7 @@ html, body {
 //responsive laptop cil
 @media (max-width: 1024px) {
   .footer-links {
-    width: 100%; // ⬅️ agar fleksibel sesuai padding container
+    width: 100%; // ⬅ agar fleksibel sesuai padding container
     justify-content: space-between;
     gap: 32px 16px;
   }
@@ -1691,12 +1836,12 @@ html, body {
 //responsive tablet
 @media (max-width: 1024px) {
   .footer {
-    padding: 64px 40px; // ✅ Sama seperti fitur/advantages untuk sejajar tablet
+    padding: 64px 40px; //  Sama seperti fitur/advantages untuk sejajar tablet
 
     .container {
       flex-direction: column;
       gap: 32px;
-      padding: 0; // ✅ Hapus padding dalam agar sejajar parent
+      padding: 0; //  Hapus padding dalam agar sejajar parent
     }
 
     .footer-top {
@@ -1715,21 +1860,21 @@ html, body {
       }
     }
 .footer-links {
-      flex: 0 0 75%; // ✅ Ambil 1 baris penuh
+      flex: 0 0 75%; // Ambil 1 baris penuh
       display: flex;
       flex-wrap: wrap;
       gap: 32px 16px;
-      justify-content: space-between; // ✅ Rata sejajar
+      justify-content: space-between; //  Rata sejajar
     }
 
     .footer-column {
-      flex: 0 0 calc(50% - 8px); // ✅ 2 kolom per baris
+      flex: 0 0 calc(50% - 8px); //  2 kolom per baris
       min-width: 200px;
     }
 
     .footer-bottom {
       margin-top: 32px;
-      text-align: center; // ✅ Tengah di tablet
+      text-align: center; //  Tengah di tablet
       font-size: 14px;
     }
   }
