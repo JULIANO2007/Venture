@@ -6,14 +6,14 @@ html, body {
   padding: 0;
   font-family: 'Inter', sans-serif;
   background-color: #ffffff;
-  color: #0e0e10;
+  color: #000000;
   overflow-x: hidden;
 }
 
 
 //Navigasi Start//
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
-// Mengimpor font "Inter" dari Google Fonts (varian weight 400 & 500)
+// Mengimpor font "Inter" dari Google Fonts (varian weighst 400 & 500)
 
 .navbar {
   position: sticky;     // Navbar akan "menempel" di atas saat scroll
@@ -135,7 +135,7 @@ html, body {
   width: 102px;
   border-radius: 4px;
 
-  // ✅ Border gradasi putih lembut
+  // Border gradasi putih lembut
   border-image: linear-gradient(
     180deg,
     rgba(255, 253, 253, 0.573) 0%,
@@ -143,7 +143,7 @@ html, body {
   );
   border-image-slice: 1;
 
-  // ✅ Shadow lembut dan highlight ala Webflow
+  // Shadow lembut dan highlight ala Webflow
   box-shadow:
     0 0 0 1px rgba(0, 0, 0, 1),               // ▪ garis tepi solid hitam
     0 0 0 4px rgba(0, 0, 0, 0.05),            // ▪ efek glow luar sangat halus
@@ -251,9 +251,9 @@ html, body {
 @media (max-width: 768px) {
   .navbar__logo {
     display: flex;
-    align-items: center; // ✅ vertikal tengah
-    height: 37px;         // ✅ samakan tinggi dengan tombol
-    margin-top: 2px;      // ✅ kecilkan perbedaan posisi (opsional)
+    align-items: center; //  vertikal tengah
+    height: 37px;         //  samakan tinggi dengan tombol
+    margin-top: 2px;      // kecilkan perbedaan posisi (opsional)
   }
 
   .navbar__brand {
@@ -266,14 +266,14 @@ html, body {
 
   .navbar__container {
     padding: 16px 32px;
-    align-items: center; // ✅ pastikan semua anaknya sejajar vertikal
+    align-items: center; // pastikan semua anaknya sejajar vertikal
   }
 }
 
 // mobile responsive M
 @media (max-width: 375px) {
   .navbar__container {
-    padding: 14px 20px; // ✅ Lebih rapat di kiri-kanan
+    padding: 14px 20px; // Lebih rapat di kiri-kanan
   }
 
   .navbar__logo {
@@ -286,7 +286,7 @@ html, body {
   }
 
   .navbar__actions {
-    right: 60px; // ✅ Sesuaikan posisi tombol di layar kecil
+    right: 60px; //  Sesuaikan posisi tombol di layar kecil
     top: 16px;
 
     .btn--black {
@@ -302,7 +302,7 @@ html, body {
   }
 
   .navbar__burger {
-    right: 16px; // ⬅️ geser burger menu ke kiri agar tidak mentok
+    right: 16px; // ⬅ geser burger menu ke kiri agar tidak mentok
     top: 18px;
   }
 }
@@ -311,7 +311,7 @@ html, body {
 // responsive mobile S
 @media (max-width: 320px) {
   .navbar__container {
-    padding: 12px 16px; // ✅ padding kiri-kanan makin sempit
+    padding: 12px 16px; // padding kiri-kanan makin sempit
   }
 
   .navbar__brand {
@@ -346,10 +346,10 @@ html, body {
   width: 100%;
   min-height: 680px;
   background: #ffffff;
-  box-shadow: 0px 4px 200px 0px #e8f9f733;
+  box-shadow: 0px 4px 200px 0px #E8F9F733;
   display: flex;
-  align-items: flex-start; // ✅ atur supaya konten mulai dari atas
-  padding-top: 70px; // ✅ geser teks agak turun sesuai referensi
+  align-items: flex-start; //  atur supaya konten mulai dari atas
+  padding-top: 70px; //  geser teks agak turun sesuai referensi
 
   &__container {
     max-width: 1440px;
@@ -360,9 +360,9 @@ html, body {
     padding-right: 80px;
     width: 100%;
     box-sizing: border-box;
-      gap: 24px; // ✅ kecilkan agar tidak terlalu sempit
+      gap: 24px; // kecilkan agar tidak terlalu sempit
   justify-content: space-between;
-  flex-wrap: nowrap; // 🛑 penting: jangan wrap agar elemen tetap sejaja
+  flex-wrap: nowrap; //  penting: jangan wrap agar elemen tetap sejaja
     //  Container dibatasi max-width dan padding, jadi gambar perlu "keluar" sedikit agar terlihat mentok kanan
   }
 
@@ -416,11 +416,39 @@ html, body {
   }
 
   &__note {
+    font-weight: 400px;
     font-size: 14px; //  sesuai figma
     line-height: 20px; //
-    color: #888888; // warna abu sesuai token Figma
+    color: #727272; // warna abu sesuai token Figma
     margin: 0; 
     max-width: 307px; // batasi lebar container
+strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: #000000;
+
+  .svg-icon {
+    display: inline-block;
+    width: 18px;               // sedikit lebih besar
+    height: 18px;
+    vertical-align: middle;    // penting: sejajar dengan teks
+
+    svg {
+      width: 100%;
+      height: 100%;
+      stroke: #000000;
+    }
+  }
+}
+
+.svg-icon {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
   }
 
   &__image {
@@ -456,12 +484,14 @@ html, body {
       position: relative;
       z-index: 1;
       border-radius: 24px;
-      border: 1.4px solid #e4e4e4;
-      box-shadow: 0px 41px 49px 4px rgba(239, 239, 244, 0.48);
+      border: 1.4px solid #ffffff;
+      box-shadow: 0px 41px 49px 4px rgba(255, 255, 255, 0.48);
       //  Pastikan img parent-nya tidak overflow hidden agar bayangan tetap terlihat
     }
   }
 }
+
+
 
 .btn {
   padding: 14px 28px;
@@ -509,6 +539,7 @@ html, body {
   }
 }
 
+
 // Responsive Tablet Hero
 @media (max-width: 1024px) {
   .hero {
@@ -521,7 +552,7 @@ html, body {
     }
 
     &__title {
-      font-size: 64px; //  Ukuran judul lebih kecil agar tidak terlalu besar di tablet
+      font-size: 88px; //  Ukuran judul lebih kecil agar tidak terlalu besar di tablet
       line-height: 100%; // inggi baris dijaga tetap rapat
       height: auto; // Tinggi elemen menyesuaikan isi
     }
@@ -533,10 +564,11 @@ html, body {
 
     &__image {
       max-width: 100%; //  Ukuran gambar dibatasi agar tidak terlalu besar
-      margin-right: -40px; //  Posisi gambar agak digeser ke kanan
+      margin-right: -280px; //  Posisi gambar agak digeser ke kanan
     }
   }
 }
+
 
 //* responsif hp Hero
 @media (max-width: 768px) {
@@ -663,16 +695,16 @@ html, body {
 
     .title {
       font-size: 48px; //  Ukuran besar agar jadi fokus utama
-      font-weight: 520; //  Sangat ringan, memberikan kesan elegan
+      font-weight: 500; //  Sangat ringan, memberikan kesan elegan
       line-height: 120%; //  Jarak antar baris sedikit lebih besar agar mudah dibaca
-      color: #0e0e10; //  Warna teks utama (hampir hitam)
+      color: #000000; //  Warna teks utama (hampir hitam)
       margin: 0 0 20px; //  Hapus margin atas, beri jarak bawah dari subtitle
       
     }
 
     .subtitle {
       font-size: 18px; //  Ukuran kecil untuk teks deskriptif
-      color: #6c6c6c; //  Abu-abu lembut agar tidak mencuri perhatian
+      color: #727272; //  Abu-abu lembut agar tidak mencuri perhatian
       line-height: 1.6; // Spasi baris longgar untuk keterbacaan
       margin: 0; //  Reset margin agar lebih konsisten
     }
@@ -695,19 +727,40 @@ html, body {
 
   // Responsive Sosial Tablet
 @media (max-width: 1024px) {
-    padding-top: 50px; //  Padding atas dikurangi agar hemat ruang di layar kecil
+    padding: 50px 48px; // Samakan dengan .hero__container
 
   .container {
-    flex-direction: column; //  Layout berubah dari horizontal menjadi vertikal (stacked) agar cocok dengan layar sempit
-    align-items: flex-start; //  Semua elemen disejajarkan ke kiri agar terlihat lebih alami dalam tata letak vertikal
+    flex-direction: row; //  Layout berubah dari horizontal menjadi vertikal (stacked) agar cocok dengan layar sempit
+    align-items: center; //  Semua elemen disejajarkan ke kiri agar terlihat lebih alami dalam tata letak vertikal
     gap: 40px; // Beri jarak vertikal antar elemen setelah ditumpuk
   }
 
-  .logos {
-    justify-content: flex-start; // Logo tidak lagi rata kanan, tapi rata kiri agar sejajar dengan teks
-    grid-template-columns: repeat(3, auto); //  Buat grid logo 3 kolom otomatis, responsif dan tetap rapi
-    padding-top: 0; // Hilangkan padding atas logo karena layout sekarang sudah stack
-  }
+    .logos {
+      justify-content: flex-start;
+      grid-template-columns: repeat(3, auto);
+      padding-top: 0;
+    }
+  
+    .text {
+      flex: 1;
+      max-width: 360px; // DIPERKECIL supaya cepat wrap jadi 2 baris
+      padding-left: 0;
+
+      .title {
+        font-size: 40px; // Ukuran diperkecil agar proporsional
+        line-height: 120%;
+        margin: 0;
+        word-break: break-word; // Paksa pecah jika perlu
+      }
+     .subtitle {
+        font-size: 10px; // Ukuran lebih kecil agar ringan
+        line-height: 150%; // Spasi cukup lega
+        color: #6c6c6c;
+        word-break: break-word;
+        margin: 0;
+      }
+    }
+
 }
 
 // Mobile
@@ -813,54 +866,64 @@ html, body {
           background-color: #f4f4f4; // f Saat hover, tombol sedikit berubah warna agar terlihat interaktif
         }
       }
-    }
-  }
-// Responsive tablet feature
+    
 @media (max-width: 1024px) {
-  padding: 96px 40px; //  Kurangi padding samping agar lebih cocok untuk layar tablet
-  gap: 64px; //  Jarak antar fitur dibuat lebih kecil agar tidak terlalu renggang
+  .features {
+    padding: 50px 48px;
+    gap: 64px;
 
-  .feature,
-  .feature.reverse {
-    flex-direction: column; //  Ubah tata letak dari horizontal ke vertikal (stacked)
-    text-align: left; //  Seluruh teks rata kiri agar mudah dibaca saat stacked
+    .feature,
+    .feature.reverse {
+      display: flex; // WAJIB agar sejajar kiri-kanan
+      flex-direction: row;
+      justify-content: space-between; // Seperti social
+      align-items: center;
+      gap: 40px;
 
-    &__content {
-      order: 1; // Pastikan konten (teks) muncul dulu sebelum gambar
-
-      h3 {
-        font-size: 28px; //  Ukuran heading dikurangi agar tetap proporsional
-        line-height: 1.4; //  Spasi antar baris tetap nyaman dibaca
-        letter-spacing: -0.5px; //  Huruf sedikit dirapatkan agar visual lebih padat
+      &__content,
+      &__image {
+        max-width: 50%;
+        width: 100%;
       }
 
-      p {
-        font-size: 16px; //  Ukuran paragraf sedang untuk kenyamanan baca
-        line-height: 1.6; //  Spasi baris untuk keterbacaan
-        letter-spacing: 0; //  Normal spacing antar huruf
+      &__image img {
+        max-width: 100%;
+        height: auto;
       }
 
-      .btn {
-        font-size: 15px; //  Ukuran tombol disesuaikan agar tidak terlalu besar
+      &__content {
+        h3 {
+          font-size: 32px;
+          line-height: 1.4;
+          letter-spacing: -0.5px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 1.6;
+        }
+
+        .btn {
+          font-size: 15px;
+        }
       }
     }
 
-    &__image {
-      order: 2; //  Gambar berada di bawah teks saat stacked
-    }
-
-    &__image,
-    &__content {
-      max-width: 100%; //  Batasi lebar agar tidak lebih dari container
-      width: 100%; //  Isi penuh container pada tablet
-    }
-
-    &__image img {
-      max-width: 100%; //  Gambar tidak melebihi lebar parent
-      height: auto; //  Tinggi gambar menyesuaikan proporsi aslinya
+    // Reverse tetap jalan
+    .feature.reverse {
+      flex-direction: row-reverse;
     }
   }
 }
+
+    // Tetap dukung reverse layout
+    .feature.reverse {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+
 
 // Responsive mobile
 @media (max-width: 640px){
@@ -921,6 +984,60 @@ html, body {
 }
 }
 
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    padding: 48px 32px;
+    gap: 48px;
+  }
+
+  .features .feature,
+  .features .feature.reverse {
+    flex-direction: column-reverse; // 👈 tulisan di atas, gambar di bawah
+    align-items: flex-start;
+    gap: 32px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .features .feature__content,
+  .features .feature__image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .features .feature__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .features .feature__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    h3 {
+      font-size: 28px;
+      line-height: 1.4;
+      text-align: left;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    .btn {
+      font-size: 14px;
+      align-self: flex-start;
+    }
+  }
+}
+
+
 //bagian advan
 .advantages-section {
   padding: 148px 0px;
@@ -930,14 +1047,14 @@ html, body {
   .container {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 80px; // ✅ Tambahkan ini agar sejajar dengan .features
+    padding: 0 80px; //  Tambahkan ini agar sejajar dengan .features
   }
 
 
   .section-title {
     width: 750px; //  Batasi lebar teks judul agar tidak terlalu panjang
     font-size: 48px; //  Ukuran besar untuk menonjolkan heading utama
-    font-weight: 515; //  Ketebalan sedang agar tetap elegan
+    font-weight: 500; //  Ketebalan sedang agar tetap elegan
     line-height: 120%; //  Spasi baris proporsional untuk teks besar
     margin-bottom: 24px; //  Jarak bawah untuk memisahkan dari subtitle
   }
@@ -952,35 +1069,39 @@ html, body {
       width: 733px; //  Sama dengan title agar sejajar
       font-size: 18px; //  Ukuran teks deskripsi sedang
       line-height: 150%; //  Spasi baris longgar agar nyaman dibaca
-      color: #666; // Abu-abu lembut untuk kesan sekunder
+      color:#727272; // Abu-abu lembut untuk kesan sekunder
       margin: 0; //  Hapus margin bawah default bawaan p agar lebih konsisten
     }
 
 .carousel-controls {
-  display: flex; // Kontrol disusun horizontal
-  gap: 10px; // Jarak antar tombol carousel
+  display: flex;
+  gap: 12px;
+.carousel-button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  background: #fff;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #333; // ⬅️ ini akan mengatur warna stroke panah
+  transition: all 0.2s ease;
 
-  .carousel-button {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%; // Lingkaran
-    border: 2px solid #333; // ✅ Buat border lebih tebal dan lebih gelap
-    background: #fff;
-    font-size: 20px; // ✅ Ukuran ikon lebih kecil agar tidak terlihat "tebal"
-    font-weight: 500; // ✅ Kurangi ketebalan ikon/tanda
-    line-height: 44px; // ✅ Biar ikon di tengah vertikal
-    text-align: center; // ✅ Tengah horizontal
-    cursor: pointer;
-    padding: 0;
-  
-
-        &:hover {
-          background: #f5f5f5; //  Efek hover agar pengguna tahu tombol aktif
-        }
-      }
-    }
+  &:hover {
+    background: #f5f5f5;
+    color: #000; // warna panah dan border ikut berubah
   }
 
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+}
+  }
   .carousel-wrapper {
     position: relative; // ntuk positioning elemen dalam wrapper (misalnya tombol)
     max-width: 100%; //  Pastikan tidak melebihi lebar container parent
@@ -1004,7 +1125,7 @@ html, body {
     width: 100%; //  Isi penuh lebar parent .carousel-slide
     max-width: 515px; //  Batasi lebar maksimal agar sesuai dengan lebar konten keseluruhan (seperti judul)
     max-height:  466px; ;
-    background: #f9f9f9; //  Warna latar abu terang untuk kontras dengan teks/gambar
+    background: #C2C2C21C; //  Warna latar abu terang untuk kontras dengan teks/gambar
     border: 1px solid #E4E4E4; //  Border halus agar tampak modern dan mirip Webflow
     border-radius: 8px; // Sudut sedikit membulat, memberi kesan lembut
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); //  Efek bayangan halus agar elemen tampak mengambang
@@ -1023,16 +1144,17 @@ html, body {
 
       h3 {
         font-size: 20px; //  Ukuran sedang agar tidak terlalu mendominasi konten lain
-        font-weight: 600; //  Tebal sedang untuk penekanan
+        font-weight: 500; //  Tebal sedang untuk penekanan
         line-height: 120%;
         margin-bottom: 6px; //  Jarak pendek sebelum deskripsi
-        color: #0e0e10; //  Warna hampir hitam untuk visibilitas maksimal
+        color: #000000; //  Warna hampir hitam untuk visibilitas maksimal
       }
 
       p {
-        font-size: 13px; // Ukuran kecil tapi tetap terbaca
-        color: #666; //  Warna abu gelap untuk kesan lembut
-        line-height: 1.5; //  Spasi antar baris untuk keterbacaan
+        font-size: 14px; // Ukuran kecil tapi tetap terbaca
+        font-weight: 400px;
+        color: #727272; //  Warna abu gelap untuk kesan lembut
+        line-height: 150%; //  Spasi antar baris untuk keterbacaan
       }
     }
   }
@@ -1180,6 +1302,7 @@ html, body {
 .integration {
   width: 100%; //  Lebar penuh layar
  min-height: 619px;
+   margin-top: 40px; // atau sesuai desain
   padding: 32px 40px; // Lebih ramping
   background-color: #ffffff; // Warna latar putih
   display: flex; //  Tampilkan konten dalam satu baris
@@ -1189,8 +1312,8 @@ html, body {
   &__container {
     display: flex; //  Layout fleksibel
     flex-wrap: wrap; //  Elemen bisa turun ke baris baru jika sempit
-    gap: 24px; // 🔽 Lebih rapat dari 48px
-    max-width: 1280px; // 🔽 Lebar dibatasi agar konten lebih padat
+    gap: 24px; //  Lebih rapat dari 48px
+    max-width: 1280px; //  Lebar dibatasi agar konten lebih padat
   min-height: 500px;
     width: 100%; //  Ikuti lebar parent
     justify-content: space-between; //  Sebar elemen secara merata
@@ -1201,16 +1324,17 @@ html, body {
     background: #ffffff; //  Latar putih untuk kartu
     border: 1px solid #e4e4e4; //  Border abu terang
     border-radius: 8px; //  Sudut membulat
-    padding: 36px; // Ruang dalam kartu
+  padding: 36px 36px 48px 36px; // atas-kanan-bawah-kiri
     flex: 1; // Biarkan fleksibel
     max-width: 616px; //  Batas maksimal lebar kartu
     display: flex; //  Layout fleksibel
     flex-direction: column; //  Tata isi secara vertikal
-    gap: 12px; //  Jarak antar elemen dalam kartu
+    gap: 24px; //  Jarak antar elemen dalam kartu
     box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.03); // Bayangan lembut
-
+      padding-bottom: 48px; // tambah jika bagian bawah terlihat terlalu padat
     align-items: center; //  Pusatkan isi secara horizontal
     text-align: center; //  Teks rata tengah
+  
   }
 
   &__title {
@@ -1222,8 +1346,9 @@ html, body {
   &__desc {
     height: 54px; //  Tinggi tetap deskripsi
     font-size: 18px; //  Ukuran teks kecil
-    color: #555; //  Warna abu gelap
-    line-height: 1.6; //  Spasi antar baris lebih lega
+    color: #727272; //  Warna abu gelap
+    line-height: 150%; //  Spasi antar baris lebih lega
+    font-weight: 400px;
   }
 
   &__button {
@@ -1258,12 +1383,12 @@ html, body {
     width: calc(100% + 72px); //  Lebarkan agar melewati padding kiri-kanan
     margin-left: -36px; //  Geser keluar kiri
     margin-right: -36px; //  Geser keluar kanan
-    margin-bottom: -36px; //  Opsional: tarik ke bawah mentok
     border-bottom-left-radius: 8px; // Ikuti sudut bawah kartu
     border-bottom-right-radius: 8px; //  Sama seperti kiri
     overflow: hidden; //  Sembunyikan elemen yang keluar
     height: auto; //  Tinggi otomatis berdasarkan gambar
-    margin-top: 24px; //  Jarak atas dari tombol
+ margin-top: 12px; // Sesuaikan dengan `gap: 12px` di card
+margin-bottom: 0; // Hindari margin negatif
 
     img {
       width: 100%; //  Gambar penuh wrapper
@@ -1449,7 +1574,7 @@ html, body {
 
   .section-subheading {
     font-size: 1rem;
-    color: #777;
+    color:#727272;
     margin-bottom: 2rem;
     line-height: 150%;
   }
@@ -1486,7 +1611,7 @@ html, body {
   .testimonial-card {
     flex-shrink: 0;
     background: white;
-    border: 1px solid #eee;
+    border: 1px solid #E4E4E4;
     border-radius: 8px;
     box-shadow:none ;
     width: 410.67px;
@@ -1497,13 +1622,13 @@ html, body {
     line-height: 120%;
 
     p {
-      width: 330.67px;
+      width: 350px;
       height: 100px;
       font-family: 'Inter', sans-serif;
       font-weight: 500;
       font-size: 18px;
       line-height: 150%;
-      color: #333;
+      color: #000000;
       margin-bottom: 20px;
     }
 
@@ -1526,13 +1651,17 @@ html, body {
         flex-direction: column;
 
         strong {
-          font-size: 1rem;
-          font-weight: 600;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 150%;
+        
         }
 
         span {
-          font-size: 0.875rem;
-          color: #888;
+          font-weight: 400px;
+          font-size: 14px;
+          color: #AFAFAF;
+          line-height: 150%;
         }
       }
     }
@@ -1658,7 +1787,8 @@ html, body {
   }
 
   .cta-subtitle {
-    font-size: 18px; //  Ukuran standar teks tambahan
+    font-size: 16px; //  Ukuran standar teks tambahan
+    line-height: 150%;
     font-weight: 500; //  Tebal normal
     color: #ffffff; // Warna putih
     margin: 0; //  Hilangkan margin default
@@ -1679,23 +1809,23 @@ html, body {
 }
 
 .cta-btn {
-  width: 138px; // ✅ Lebar tombol
-  height: 48px; // ✅ Tinggi tombol
-  padding: 16px 17px; // ✅ Padding atas-bawah 12px, kanan-kiri 18px
-  display: flex; // ✅ Supaya gap berlaku
-  white-space: nowrap; // ✅ Teks tidak boleh turun
-  align-items: center; // ✅ Tengah secara vertikal
-  justify-content: center; // ✅ Tengah secara horizontal
-  gap: 8px; // ✅ Jarak antar isi (misal ikon dan teks)
-  border-radius: 4px; // ✅ Sudut tombol dibulatkan 4px
+  width: 138px; //  Lebar tombol
+  height: 48px; //  Tinggi tombol
+  padding: 16px 17px; //  Padding atas-bawah 12px, kanan-kiri 18px
+  display: flex; // Supaya gap berlaku
+  white-space: nowrap; // Teks tidak boleh turun
+  align-items: center; //  Tengah secara vertikal
+  justify-content: center; //  Tengah secara horizontal
+  gap: 8px; // Jarak antar isi (misal ikon dan teks)
+  border-radius: 4px; //  Sudut tombol dibulatkan 4px
   font-weight: 500; // (Opsional) Tambahkan gaya teks
   font-size: 18px; // (Opsional) Ukuran teks agar proporsional
     margin-right: 12px;
 
 
   &.primary {
-    background-color: #fff; // ✅ Warna latar putih
-    color: #000; // ✅ Warna teks hitam
+    background-color: #fff; //Warna latar putih
+    color: #000; // Warna teks hitam
   }
 
 
@@ -1754,7 +1884,7 @@ html, body {
       a {
         width: 48px;
         height: 48px;
-        background: #f4f4f4;
+        background: #F2F2F2;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -1787,12 +1917,14 @@ html, body {
       font-weight: 600;
       margin-bottom: 12px;
       line-height: 150%;
+        font-family: 'Inter', sans-serif;
+
     }
 
     a {
       display: block;
       font-size: 16px;
-      color: #555;
+      color:#727272;
       margin-bottom: 10px;
 
       &:hover {
@@ -1804,7 +1936,7 @@ html, body {
   .footer-bottom {
     text-align: center;
     font-size: 14px;
-    color: #999;
+    color: #AFAFAF;
     margin-top: 16px;
     line-height: 150%;
 

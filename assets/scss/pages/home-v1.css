@@ -106,7 +106,6 @@ html {
   height: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  font-family: sans-serif;
   display: block;
 }
 
@@ -133,14 +132,12 @@ h6,
 .heading-style-h1 {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "FT Sterling", Verdana, sans-serif;
   font-weight: 600;
 }
 
 .text-size-tiny, .text-size-small, .text-size-regular, .text-size-medium, .text-size-large, body {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "Mona Sans", Verdana, sans-serif;
   font-weight: 400;
 }
 
