@@ -118,8 +118,10 @@ li a {
 }
 
 @media (max-width: 768px) {
+  // 1. Navbar
   .navbar__container {
-    padding: 16px 24px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 
@@ -638,24 +640,45 @@ strong {
     }
   }
 }
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .hero__image {
+    margin-right: -120px; // atau coba -100px
+  }
+}
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .hero__title {
+    font-size: 72px;
+  }
+
+  .hero__image {
+    margin-right: -120px;
+  }
+
+  .social-proof .logos {
+    gap: 24px;
+  }
+}
 
 // ✅ TABLET (768px) – Full Width Container
 @media (max-width: 768px) {
+  // 2. Hero Section
   .hero {
-    padding: 60px 32px;
-
-
+    padding-left: 32px;
+    padding-right: 32px;
+  
     &__container {
       flex-direction: column;
       align-items: flex-start;
       text-align: left;
-
+         padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
       // ✅ Override style desktop
-      width: 100% !important;
       max-width: 100% !important;
-      margin: 0 !important; // <— ini yang hilang di kamu sebelumnya
-      padding-left: 24px;
-      padding-right: 24px;
+      padding-left: 32px;
+      padding-right: 32px;
       box-sizing: border-box;
       gap: 32px;
     }
@@ -746,6 +769,14 @@ strong {
 }
 
 
+@media (max-width: 480px) {
+  .hero__text {
+    gap: 20px; // atau bisa 16px tergantung hasil preview
+  }
+}
+
+
+
 //* bagian social 
 .social-proof {
   padding: 96px 80px; //  Padding atas & bawah besar agar ada ruang lega, samping 80px untuk konten tidak terlalu mepet 
@@ -801,7 +832,21 @@ justify-items: end;
     }
   }
 
-  // Responsive Sosial Tablet
+  // Responsive Sosial laptop kecil
+  @media (min-width: 1025px) and (max-width: 1366px) {
+  .hero__title {
+    font-size: 72px;
+     .hero__image {
+    margin-right: 0; // ✅ Ini penting untuk laptop dan desktop
+  }
+  }
+}
+@media (min-width: 1025px) {
+  .hero__container {
+    flex-wrap: nowrap;
+  }
+}
+
 @media (max-width: 1024px) {
     padding: 50px 48px; // Samakan dengan .hero__container
 
@@ -839,12 +884,56 @@ justify-items: end;
 
 }
 @media (max-width: 768px) {
-  .logos {
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+  .social-proof {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .social-proof .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .social-proof .text {
+    width: 100%;
+
+    .title {
+      font-size: 80px;
+      line-height: 130%;
+      max-width: 280px;
+      word-break: break-word;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      line-height: 160%;
+      color: #6c6c6c;
+      margin-top: 8px;
+    }
+  }
+
+  .social-proof .logos {
+    display: flex;                  // 💡 Ganti dari grid ke flex
+    flex-wrap: wrap;               // 💡 Supaya tetap dua baris
+    gap: 24px 48px;                // 💡 Jarak horizontal antar logo diperlebar
+    align-items: center;
+    justify-content: flex-start;   // 💡 Rata kiri seluruh baris
+    width: 100%;
+    padding-left: 4px;
+
+    img {
+      height: 52px;                // 💡 Diperbesar agar lebih lebar seperti yang kamu inginkan
+      object-fit: contain;
+      max-width: 120px;            // 💡 Optional, batasi lebarnya biar gak kepanjangan
+    }
   }
 }
-
 
 // Mobile
 @media (max-width: 576px) {
@@ -1095,10 +1184,21 @@ justify-items: end;
 }
 
 @media (max-width: 768px) {
-  .features {
-    flex-direction: column;
-    padding: 48px 32px;
-    gap: 48px;
+ .features {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .features .feature,
+  .features .feature.reverse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .features .feature__content,
+  .features .feature__image {
+    width: 100%;
+    max-width: 100%;
   }
 
   .features .feature,
@@ -1271,7 +1371,7 @@ justify-items: end;
 }
 }
 
-//responsive tablet advantaes
+//responsive laptop kecil
 
 @media (max-width: 1024px) {
   .advantages-section {
@@ -1295,7 +1395,7 @@ justify-items: end;
     }
 
     .carousel-slide {
-      padding: 0 8px;
+      padding: 0 16px; // ⬅️ update dari 0 8px ke 0 16px (1rem total gap antar kartu = 32px antar dua kartu)
     }
 
     .image-wrapper {
@@ -1314,7 +1414,6 @@ justify-items: end;
     }
   }
 }
-
 @media (max-width: 768px) {
   .advantages-section {
     padding: 48px 24px;
@@ -1328,8 +1427,8 @@ justify-items: end;
     }
 
     .carousel-slide {
-      padding: 0 4px;
-      justify-content: center; // Tengah di mobile
+      padding: 0 12px; // ⬅️ Tambah jarak antar kartu (gap total = 24px)
+      justify-content: center;
     }
 
     .image-wrapper {
@@ -1338,6 +1437,7 @@ justify-items: end;
 
     .carousel-controls {
       align-self: flex-end;
+
       .carousel-button {
         width: 36px;
         height: 36px;
@@ -1346,6 +1446,7 @@ justify-items: end;
     }
   }
 }
+
 @media (max-width: 640px) {
   .advantages-section {
     padding: 80px 24px;
@@ -2120,36 +2221,23 @@ margin-bottom: 0; // Hindari margin negatif
     }
   }
 }
+@media (max-width: 767px) {
 
-/* Responsive */
-@media (max-width: 768px) {
   .footer {
     padding: 48px 24px;
-
-    .container {
-      gap: 24px;
-    }
 
     .footer-top {
       flex-direction: column;
       gap: 32px;
     }
 
-    .footer-brand {
-      align-items: flex-start;
-
-      .socials {
-        gap: 12px;
-      }
-    }
-
     .footer-links {
+      flex-direction: column; // ⬅️ jadi 1 kolom di mobile
       gap: 32px;
     }
 
-    .footer-bottom {
-      text-align: left;
-      margin-top: 24px;
+    .footer-column {
+      flex: 0 0 100%; // ⬅️ lebar penuh
     }
   }
 }
