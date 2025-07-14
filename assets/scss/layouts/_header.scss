@@ -1017,18 +1017,18 @@ strong {
 // === END SOCIAL PROOF === //
 
 //* Bagian Feanture 
-
 .features {
-  max-width: 1440px; // Batas maksimal lebar section agar tidak terlalu lebar di layar besar
-  margin: 0 auto; // Pusatkan section secara horizontal di dalam halaman
-  padding: 148px 60px; //  Ruang atas-bawah besar (148px), samping kiri-kanan 60px untuk spasi yang nyaman
-  display: flex; //  Gunakan flex untuk menyusun konten di dalamnya
-  flex-direction: column; //  Susun konten secara vertikal (ke bawah)
-  gap: 76px; // Jarak antar setiap blok fitur (feature)
-   background-color: #F9F9F9;
+  width: 100vw;
   position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: #F9F9F9;
+  padding: 148px 0; // padding horizontal pindah ke .features__container
   overflow: hidden;
 
+  // Gradien atas bawah tetap
   &::before,
   &::after {
     content: "";
@@ -1042,15 +1042,25 @@ strong {
 
   &::before {
     top: 0;
-    background: linear-gradient(to bottom, #fff, transparent); // overlay atas
+    background: linear-gradient(to bottom, #fff, transparent);
   }
 
   &::after {
     bottom: 0;
-    background: linear-gradient(to top, #fff, transparent); // overlay bawah
+    background: linear-gradient(to top, #fff, transparent);
   }
 
-  
+  .features__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px; // Padding kiri-kanan untuk jarak
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 76px;
+}
+
 
   .feature {
     display: flex; //  Gunakan flexb biar gambar dan konten bisa sejajar horizontal
