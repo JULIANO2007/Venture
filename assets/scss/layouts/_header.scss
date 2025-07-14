@@ -43,7 +43,7 @@ html, body {
   &__logo {
     display: flex;
     align-items: center;
-    gap: 12px;                // Jarak antara logo dan teks
+    gap: 1px;                // Jarak antara logo dan teks
     height: 28px;
 
     img {
@@ -118,10 +118,8 @@ li a {
 }
 
 @media (max-width: 768px) {
-  // 1. Navbar
   .navbar__container {
-    padding-left: 32px;
-    padding-right: 32px;
+    padding: 20px; // dari sebelumnya 32px
   }
 }
 
@@ -211,12 +209,13 @@ li a {
     }
 
     // RESPONSIVE override
-    @media (max-width: 768px) {
-      // Atur posisi tombol login dan CTA di layar kecil
-      position: absolute;
-      right: 64px;
-      top: 20px;
-      gap: 12px;
+@media (max-width: 768px) {
+  .navbar__actions {
+    display: flex !important; // ⬅️ pastikan tampil
+    margin-right: 48px;       // ⬅️ beri jarak dari burger
+  }
+
+
 
       .btn--black {
         // Ukuran tombol CTA di mobile
@@ -235,6 +234,20 @@ li a {
     display: none;
     font-size: 24px;
     cursor: pointer;
+
+    @media (max-width: 768px) and (min-width: 641px) {
+  .navbar__actions {
+    display: flex !important;
+    margin-right: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar__actions {
+    display: none !important;
+  }
+}
+
 
     @media (max-width: 768px) {
       // Tampilkan ikon burger di mobile
@@ -328,15 +341,29 @@ li a {
   }
 }
 
+@media (max-width: 768px) and (min-width: 641px) {
+  .navbar__actions {
+    display: flex !important;
+    margin-right: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar__actions {
+    display: none !important;
+  }
+}
+
+
 // mobile responsive M
 @media (max-width: 375px) {
   .navbar__container {
-    padding: 14px 20px; // Lebih rapat di kiri-kanan
+    padding: 20px; // dari sebelumnya 14px 20px
   }
 
   .navbar__logo {
     height: 32px; // sedikit lebih kecil
-    gap: 12px; // jarak logo dan teks dikecilkan
+    gap: 8px; // jarak logo dan teks dikecilkan
   }
 
   .navbar__brand {
@@ -344,8 +371,10 @@ li a {
   }
 
   .navbar__actions {
-    right: 60px; //  Sesuaikan posisi tombol di layar kecil
+    right: 40px; //  Sesuaikan posisi tombol di layar kecil
     top: 16px;
+        display: none;
+
 
     .btn--black {
       padding: 6px 10px;
@@ -367,19 +396,19 @@ li a {
 
 
 // responsive mobile S
+
 @media (max-width: 320px) {
   .navbar__container {
-    padding: 12px 16px; // padding kiri-kanan makin sempit
+    padding: 16px; // boleh tetap sempit di ukuran sangat kecil
   }
-
   .navbar__brand {
     font-size: 15px;
   }
 
-  .navbar__actions {
-    right: 54px; // geser tombol ke kiri lagi
-    gap: 8px;
 
+  .navbar__actions {
+    display: none;
+  
     .btn--black {
       padding: 6px 8px;
       font-size: 12px;
@@ -775,186 +804,218 @@ strong {
   }
 }
 
+// Mobile M: max-width 375px
+@media (max-width: 375px) {
+  .hero__title {
+    font-size: 30px;
+    line-height: 110%;
+  }
+
+  .hero__desc {
+    font-size: 14px;
+  }
+}
+
+// Mobile S: max-width 325px
+@media (max-width: 325px) {
+  .hero__title {
+    font-size: 26px;
+    line-height: 110%;
+    word-break: break-word;
+  }
+
+  .hero__desc {
+    font-size: 13px;
+    line-height: 150%;
+  }
+
+  .hero__container {
+    padding: 0 16px;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 12px 20px;
+  }
+}
 
 
-//* bagian social 
+// === SOCIAL PROOF COMPONENT (Responsive & Clean Structure) === //
+
 .social-proof {
-  padding: 96px 80px; //  Padding atas & bawah besar agar ada ruang lega, samping 80px untuk konten tidak terlalu mepet 
-  background: #fff; //  Latar belakang putih untuk kesan bersih
-  width: 100%; // Lebar penuh agar mengisi seluruh layar
-  max-width: 1440px; //  Batas maksimal lebar agar tidak terlalu lebar di layar besar
-  margin: 0 auto; //  Tengah secara horizontal
+  background: #fff;
+  padding: 96px 80px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 
   .container {
-    display: flex; //  Mengatur elemen anak dalam satu baris
-    justify-content: space-between; //  Jarak maksimal antar elemen kiri & kanan
-    align-items: center; // Semua elemen disejajarkan secara vertikal ke tengah
-    gap: 40px; // Jarak antar elemen kiri-kanan (teks dan logo)
-    flex-wrap: wrap; //  Jika ruang tidak cukup, elemen akan turun ke baris baru (responsif)
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
   }
 
   .text {
-    flex: 1; //  Elemen mengambil ruang fleksibel 1 bagian dari container flex
-    min-width: 280px; //  Pastikan elemen tidak jadi terlalu sempit di layar kecil
-    max-width: 584px; //  Batas maksimal supaya teks tetap mudah dibaca
-    gap: 16px; // (Jika digunakan dengan layout grid/flex) Jarak antar item dalam .text
+    flex: 1;
+    min-width: 280px;
+    max-width: 584px;
 
     .title {
-      font-size: 48px; //  Ukuran besar agar jadi fokus utama
-      font-weight: 500; //  Sangat ringan, memberikan kesan elegan
-      line-height: 120%; //  Jarak antar baris sedikit lebih besar agar mudah dibaca
-      color: #000000; //  Warna teks utama (hampir hitam)
-      margin: 0 0 20px; //  Hapus margin atas, beri jarak bawah dari subtitle
-      
-    }
-
-    .subtitle {
-      font-weight: 400px;
-      font-size: 18px; //  Ukuran kecil untuk teks deskriptif
-      color: #727272; //  Abu-abu lembut agar tidak mencuri perhatian
-      line-height: 1.6; // Spasi baris longgar untuk keterbacaan
-      margin: 0; //  Reset margin agar lebih konsisten
-    }
-  }
-
-  .logos {
-    flex: 1; // Ambil sisa ruang sama seperti teks
-    display: grid; //  Menggunakan grid agar logo tersusun rapi
-grid-template-columns: repeat(3, 1fr);
-    gap: 32px; // Jarak antar logo
-justify-items: end;
-    padding-top: 12px; //  Logo sedikit diangkat agar sejajar secara vertikal dengan teks
-
-    img {
-      height: 48px; //  Ukuran tinggi logo standar agar seragam
-      object-fit: contain; // Logo tidak akan dipotong, akan menyesuaikan proporsinya
-      opacity: 1; // Logo tampil penuh (tidak transparan)
-    }
-  }
-
-  // Responsive Sosial laptop kecil
-  @media (min-width: 1025px) and (max-width: 1366px) {
-  .hero__title {
-    font-size: 72px;
-     .hero__image {
-    margin-right: 0; // ✅ Ini penting untuk laptop dan desktop
-  }
-  }
-}
-@media (min-width: 1025px) {
-  .hero__container {
-    flex-wrap: nowrap;
-  }
-}
-
-@media (max-width: 1024px) {
-    padding: 50px 48px; // Samakan dengan .hero__container
-
-  .container {
-    flex-direction: row; //  Layout berubah dari horizontal menjadi vertikal (stacked) agar cocok dengan layar sempit
-    align-items: center; //  Semua elemen disejajarkan ke kiri agar terlihat lebih alami dalam tata letak vertikal
-    gap: 40px; // Beri jarak vertikal antar elemen setelah ditumpuk
-  }
-
-    .logos {
-      justify-content: flex-start;
-      grid-template-columns: repeat(3, auto);
-      padding-top: 0;
-    }
-  
-    .text {
-      flex: 1;
-      max-width: 360px; // DIPERKECIL supaya cepat wrap jadi 2 baris
-      padding-left: 0;
-
-      .title {
-        font-size: 40px; // Ukuran diperkecil agar proporsional
-        line-height: 120%;
-        margin: 0;
-        word-break: break-word; // Paksa pecah jika perlu
-      }
-     .subtitle {
-        font-size: 10px; // Ukuran lebih kecil agar ringan
-        line-height: 150%; // Spasi cukup lega
-        color: #6c6c6c;
-        word-break: break-word;
-        margin: 0;
-      }
-    }
-
-}
-@media (max-width: 768px) {
-  .social-proof {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  .social-proof .container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 32px;
-    padding-left: 32px;
-    padding-right: 32px;
-    margin: 0 auto;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .social-proof .text {
-    width: 100%;
-
-    .title {
-      font-size: 80px;
-      line-height: 130%;
-      max-width: 280px;
-      word-break: break-word;
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 120%;
+      color: #000;
+      margin-bottom: 20px;
     }
 
     .subtitle {
       font-size: 18px;
-      line-height: 160%;
-      color: #6c6c6c;
-      margin-top: 8px;
+      font-weight: 400;
+      color: #727272;
+      line-height: 1.6;
+      margin: 0;
     }
-  }
-
-  .social-proof .logos {
-    display: flex;                  // 💡 Ganti dari grid ke flex
-    flex-wrap: wrap;               // 💡 Supaya tetap dua baris
-    gap: 24px 48px;                // 💡 Jarak horizontal antar logo diperlebar
-    align-items: center;
-    justify-content: flex-start;   // 💡 Rata kiri seluruh baris
-    width: 100%;
-    padding-left: 4px;
-
-    img {
-      height: 52px;                // 💡 Diperbesar agar lebih lebar seperti yang kamu inginkan
-      object-fit: contain;
-      max-width: 120px;            // 💡 Optional, batasi lebarnya biar gak kepanjangan
-    }
-  }
-}
-
-// Mobile
-@media (max-width: 576px) {
-  padding: 48px 24px; //  Padding makin kecil agar konten tidak terlalu menumpuk di layar kecil
-
-  .text .title {
-    font-size: 32px; //  Judul dikecilkan agar tetap pas di layar HP, tidak pecah ke beberapa baris
-  }
-
-  .text .subtitle {
-    font-size: 14px; //  Ukuran teks deskripsi juga dikecilkan untuk keterbacaan di HP
   }
 
   .logos {
-  display: flex; // ubah dari grid ke flex
-  justify-content: flex-start; // untuk align logo ke kanan
-  flex-wrap: wrap; // supaya logo bisa turun ke baris berikutnya jika sempit
-  gap: 24px; // jarak antar logo
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    justify-items: end;
+    padding-top: 12px;
+
+    img {
+      height: 48px;
+      object-fit: contain;
+      opacity: 1;
+    }
+  }
+
+  // === Tablet (768px - 1024px) === //
+  @media (max-width: 1024px) {
+    padding: 64px 48px;
+
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+      width: 100%;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .text {
+      width: 100%;
+      max-width: 100%;
+
+      .title {
+        font-size: 40px;
+        line-height: 120%;
+        word-break: break-word;
+      }
+
+      .subtitle {
+        font-size: 16px;
+        color: #6c6c6c;
+        line-height: 150%;
+        margin-top: 8px;
+      }
+    }
+
+    .logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 24px 48px;
+      width: 100%;
+      padding-top: 0;
+
+      img {
+        height: 52px;
+        max-width: 120px;
+      }
+    }
+  }
+
+  // === Mobile L (≤425px) === //
+  @media (max-width: 425px) {
+    padding: 48px 24px;
+
+    .text {
+      .title {
+        font-size: 32px;
+        line-height: 130%;
+      }
+
+      .subtitle {
+        font-size: 14px;
+      }
+    }
+
+    .logos {
+      gap: 20px 32px;
+
+      img {
+        height: 48px;
+        max-width: 100px;
+      }
+    }
+  }
+
+  // === Mobile M (≤375px) === //
+  @media (max-width: 375px) {
+    padding: 40px 20px;
+
+    .text {
+      .title {
+        font-size: 28px;
+      }
+
+      .subtitle {
+        font-size: 13px;
+      }
+    }
+
+    .logos {
+      gap: 16px 24px;
+
+      img {
+        height: 44px;
+        max-width: 90px;
+      }
+    }
+  }
+
+  // === Mobile S (≤320px) === //
+  @media (max-width: 320px) {
+    padding: 32px 16px;
+
+    .text {
+      .title {
+        font-size: 24px;
+      }
+
+      .subtitle {
+        font-size: 12px;
+      }
+    }
+
+    .logos {
+      gap: 12px 16px;
+
+      img {
+        height: 40px;
+        max-width: 80px;
+      }
+    }
+  }
 }
-}
-}
+
+// === END SOCIAL PROOF === //
+
 //* Bagian Feanture 
 
 .features {
