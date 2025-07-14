@@ -1119,14 +1119,14 @@ html, body {
 }
 
 .features {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 148px 60px;
-  display: flex;
-  flex-direction: column;
-  gap: 76px;
-  background-color: #F9F9F9;
+  width: 100vw;
   position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: #F9F9F9;
+  padding: 148px 0;
   overflow: hidden;
 }
 .features::before, .features::after {
@@ -1145,6 +1145,16 @@ html, body {
 .features::after {
   bottom: 0;
   background: linear-gradient(to top, #fff, transparent);
+}
+.features .features__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 76px;
 }
 .features .feature {
   display: flex;
@@ -3037,14 +3047,14 @@ html, body {
 }
 
 .features {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 148px 60px;
-  display: flex;
-  flex-direction: column;
-  gap: 76px;
-  background-color: #F9F9F9;
+  width: 100vw;
   position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: #F9F9F9;
+  padding: 148px 0;
   overflow: hidden;
 }
 .features::before, .features::after {
@@ -3063,6 +3073,16 @@ html, body {
 .features::after {
   bottom: 0;
   background: linear-gradient(to top, #fff, transparent);
+}
+.features .features__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 76px;
 }
 .features .feature {
   display: flex;
