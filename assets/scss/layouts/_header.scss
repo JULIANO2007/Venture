@@ -718,7 +718,7 @@ strong {
     }
 
     &__title {
-      font-size: 64px; // opsional: dikecilkan agar nyaman di tablet
+      font-size: 90px; // opsional: dikecilkan agar nyaman di tablet
       line-height: 110%;
       height: auto;
     }
@@ -764,6 +764,17 @@ strong {
     }
   }
 }
+@media (max-width: 768px) {
+  .hero__image {
+    align-self: center; // agar tetap proporsional dan sejajar tengah
+    margin-top: 24px; // beri jarak dari teks atas
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain; // agar tidak pecah atau lonjong
+    }
+  }
+}
 
 
 //* Responsive ekstra kecil (mobile kecil - 480px)
@@ -776,7 +787,7 @@ strong {
     }
 
     &__title {
-      font-size: 36px; //  Judul lebih kecil lagi agar pas di layar sempit
+      font-size: 48px; //  Judul lebih kecil lagi agar pas di layar sempit
     }
 
     &__desc {
@@ -804,40 +815,96 @@ strong {
   }
 }
 
-// Mobile M: max-width 375px
-@media (max-width: 375px) {
-  .hero__title {
-    font-size: 30px;
-    line-height: 110%;
-  }
-
-  .hero__desc {
-    font-size: 14px;
-  }
-}
-
-// Mobile S: max-width 325px
-@media (max-width: 325px) {
-  .hero__title {
-    font-size: 26px;
-    line-height: 110%;
-    word-break: break-word;
-  }
-
-  .hero__desc {
-    font-size: 13px;
-    line-height: 150%;
+@media (max-width: 376px) {
+  .hero {
+    padding-top: 36px;
   }
 
   .hero__container {
     padding: 0 16px;
+    gap: 24px;
+  }
+
+  .hero__text {
+    gap: 20px;
+  }
+
+  .hero__title {
+    font-size: 36px;
+    line-height: 110%;
+    height: auto;
+    word-break: break-word;
+  }
+
+  .hero__desc {
+    font-size: 14px;
+    line-height: 150%;
+    max-width: 100%;
+  }
+
+  .hero__buttons {
+    gap: 10px;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+
+    .btn {
+      font-size: 14px;
+      padding: 12px 20px;
+      width: 100%;
+    }
+  }
+
+  .hero__note {
+    font-size: 12px;
+    line-height: 18px;
+    max-width: 100%;
+  }
+
+  .hero__image {
+    margin-top: 24px;
+    width: 100%;
+    max-width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}
+@media (max-width: 320px) {
+  .hero {
+    padding-top: 28px;
+  }
+
+  .hero__container {
+    padding: 0 12px;
+    gap: 20px;
+  }
+
+  .hero__title {
+    font-size: 36px;
+    line-height: 110%;
+  }
+
+  .hero__desc {
+    font-size: 16px;
+    line-height: 150%;
   }
 
   .btn {
     font-size: 13px;
-    padding: 12px 20px;
+    padding: 12px 16px;
+  }
+
+  .hero__note {
+    font-size: 18px;
+    line-height: 16px;
   }
 }
+
+
 
 
 // === SOCIAL PROOF COMPONENT (Responsive & Clean Structure) === //
@@ -849,7 +916,7 @@ strong {
   max-width: 1440px;
   margin: 0 auto;
 
-  .container {
+ .social-proof__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -879,20 +946,25 @@ strong {
     }
   }
 
-  .logos {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    justify-items: end;
-    padding-top: 12px;
+.logos {
+  flex: 0 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  justify-items: end;
+  padding-top: 12px;
+  min-width: 280px;
+  max-width: 100%;
 
-    img {
-      height: 48px;
-      object-fit: contain;
-      opacity: 1;
-    }
+  img {
+    height: 48px;
+    object-fit: contain;
+    opacity: 1;
   }
+}
+
+
+
 
   // === Tablet (768px - 1024px) === //
   @media (max-width: 1024px) {
@@ -1018,14 +1090,8 @@ strong {
 
 //* Bagian Feanture 
 .features {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
   background-color: #F9F9F9;
-  padding: 148px 0; // padding horizontal pindah ke .features__container
+  padding: 148px 0;
   overflow: hidden;
 
   // Gradien atas bawah tetap
@@ -1053,7 +1119,7 @@ strong {
   .features__container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 24px; // Padding kiri-kanan untuk jarak
+  padding: 0 60px;
   box-sizing: border-box;
   width: 100%;
   display: flex;
@@ -1139,7 +1205,7 @@ strong {
     
 @media (max-width: 1024px) {
   .features {
-    padding: 50px 48px;
+    padding: 96px 40px; // Sedikit padding di tablet
     gap: 64px;
 
     .feature,
@@ -1256,14 +1322,14 @@ strong {
 
 @media (max-width: 768px) {
  .features {
-    padding-left: 32px;
-    padding-right: 32px;
+    padding: 48px 24px;
+
   }
 
-  .features .feature,
-  .features .feature.reverse {
-    padding-left: 0;
-    padding-right: 0;
+ .feature,
+   .feature.reverse {
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   .features .feature__content,
@@ -1274,7 +1340,7 @@ strong {
 
   .features .feature,
   .features .feature.reverse {
-    flex-direction: column-reverse; // 👈 tulisan di atas, gambar di bawah
+    flex-direction: column-reverse; // 
     align-items: flex-start;
     gap: 32px;
     padding: 0;
@@ -1786,7 +1852,7 @@ margin-bottom: 0; // Hindari margin negatif
 // responsive laptop kecil
 @media (max-width: 1024px) {
   .integration {
-    padding: 40px 24px;
+    padding: 96px 40px; // Sedikit padding di tablet
 
     &__container {
       justify-content: center;
@@ -2303,12 +2369,12 @@ margin-bottom: 0; // Hindari margin negatif
     }
 
     .footer-links {
-      flex-direction: column; // ⬅️ jadi 1 kolom di mobile
+      flex-direction: column; 
       gap: 32px;
     }
 
     .footer-column {
-      flex: 0 0 100%; // ⬅️ lebar penuh
+      flex: 0 0 100%; 
     }
   }
 }
