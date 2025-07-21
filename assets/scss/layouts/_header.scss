@@ -1006,7 +1006,7 @@ strong {
       padding-top: 0;
 
       img {
-        height: 52px;
+        height: 52xpx;
         max-width: 120px;
       }
     }
@@ -1063,7 +1063,7 @@ strong {
 
   // === Mobile S (≤320px) === //
   @media (max-width: 320px) {
-    padding: 32px 16px;
+    padding: 0px 12px;
 
     .text {
       .title {
@@ -1892,6 +1892,38 @@ margin-bottom: 0; // Hindari margin negatif
     &__image-wrapper {
       margin-top: 20px; // ✅ Jarak dari tombol
       width: 100%;
+    }
+  }
+}
+
+
+@media (max-width: 360px) {
+  .integration {
+    padding: 24px 12px;
+
+    &__card {
+      padding: 16px 12px;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__desc {
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    &__button {
+      font-size: 13px;
+      padding: 8px 10px;
+      height: 38px;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    &__image-wrapper {
+      margin-top: 12px;
     }
   }
 }
