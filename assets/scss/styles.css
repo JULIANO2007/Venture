@@ -1038,13 +1038,14 @@ html, body {
 .social-proof {
   background: #fff;
   padding: 96px 80px;
-  width: 100%;
   max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
 }
 .social-proof .social-proof__container {
   display: flex;
   align-items: center;
+  width: 100%;
   justify-content: space-between;
   gap: 40px;
   flex-wrap: wrap;
@@ -1115,13 +1116,50 @@ html, body {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 24px 48px;
+    gap: 24px 40px;
     width: 100%;
     padding-top: 0;
   }
   .social-proof .logos img {
     height: 52xpx;
     max-width: 120px;
+  }
+}
+@media (max-width: 768px) {
+  .social-proof {
+    padding: 56px 56px;
+  }
+  .social-proof .social-proof__container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .social-proof .text {
+    width: 100%;
+    max-width: 100%;
+  }
+  .social-proof .text .title {
+    font-size: 36px;
+    line-height: 130%;
+    word-break: break-word;
+  }
+  .social-proof .text .subtitle {
+    font-size: 16px;
+    line-height: 150%;
+    color: #6c6c6c;
+    margin-top: 8px;
+  }
+  .social-proof .logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: start;
+    gap: 24px 32px;
+    width: 100%;
+    padding-top: 0;
+  }
+  .social-proof .logos img {
+    height: 48px;
+    max-width: 100px;
   }
 }
 @media (max-width: 425px) {
@@ -3046,13 +3084,14 @@ html, body {
 .social-proof {
   background: #fff;
   padding: 96px 80px;
-  width: 100%;
   max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
 }
 .social-proof .social-proof__container {
   display: flex;
   align-items: center;
+  width: 100%;
   justify-content: space-between;
   gap: 40px;
   flex-wrap: wrap;
@@ -3123,13 +3162,50 @@ html, body {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 24px 48px;
+    gap: 24px 40px;
     width: 100%;
     padding-top: 0;
   }
   .social-proof .logos img {
     height: 52xpx;
     max-width: 120px;
+  }
+}
+@media (max-width: 768px) {
+  .social-proof {
+    padding: 56px 56px;
+  }
+  .social-proof .social-proof__container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .social-proof .text {
+    width: 100%;
+    max-width: 100%;
+  }
+  .social-proof .text .title {
+    font-size: 36px;
+    line-height: 130%;
+    word-break: break-word;
+  }
+  .social-proof .text .subtitle {
+    font-size: 16px;
+    line-height: 150%;
+    color: #6c6c6c;
+    margin-top: 8px;
+  }
+  .social-proof .logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: start;
+    gap: 24px 32px;
+    width: 100%;
+    padding-top: 0;
+  }
+  .social-proof .logos img {
+    height: 48px;
+    max-width: 100px;
   }
 }
 @media (max-width: 425px) {
