@@ -10,31 +10,25 @@ html, body {
   overflow-x: hidden; 
 }
 
-
-//Navigasi Start//
+// Navigasi Start
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
-// Mengimpor font "Inter" dari Google Fonts (varian weighst 400 & 500)
 
 .navbar {
-  position: sticky;     // Navbar akan "menempel" di atas saat scroll
-  top: 0;               // Ditempelkan di bagian atas viewport
-  z-index: 1000;        // Supaya selalu di atas elemen lain
-  background: #fff;     // Warna background putih
-  font-family: 'Open Sauce Sans', sans-serif; // Font utama navbar
-  .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  font-family: 'Open Sauce Sans', sans-serif;
   height: 80px;
-}
-
-
 
   &__container {
-    width: 100%;              // Lebar penuh layar
-    max-width: 1440px;        // Maksimal lebar (sesuai Figma)
-    margin: 0 auto;           // Tengah secara horizontal
-    padding: 24px 80px;       // Padding sesuai desain
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 24px 80px;
     display: flex;
-    align-items: center;      // Pusat vertikal
-    justify-content: space-between; // Elemen di kanan & kiri
+    align-items: center;
+    justify-content: space-between;
     box-sizing: border-box;
     line-height: 1.5;
     vertical-align: middle;
@@ -43,14 +37,14 @@ html, body {
   &__logo {
     display: flex;
     align-items: center;
-    gap: 1px;                // Jarak antara logo dan teks
+    gap: 1px;
     height: 28px;
 
     img {
       width: 28px;
       height: 28.07px;
-      object-fit: contain;   // Hindari distorsi gambar
-      display: block;        // Hindari spasi inline
+      object-fit: contain;
+      display: block;
     }
 
     .navbar__brand {
@@ -58,7 +52,6 @@ html, body {
       font-size: 20px;
       font-weight: 500;
       line-height: 140%;
-      letter-spacing: 0;
       color: #000;
       width: 75px;
       height: 28px;
@@ -75,62 +68,42 @@ html, body {
     gap: 40px;
     list-style: none;
 
-li a {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 150%;
-  letter-spacing: 0;
-  text-decoration: none;
-  color: #000;
-  transition: color 0.2s ease;
-  cursor: pointer;
+    li a {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 150%;
+      text-decoration: none;
+      color: #000;
+      transition: color 0.2s ease;
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
 
-  position: relative;
-  display: inline-block;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 100%;
+        height: 2px;
+        background-color: currentColor;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+      }
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 100%;
-    height: 2px;
-    background-color: currentColor;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-  }
+      &:hover::after {
+        transform: scaleX(1);
+      }
 
-  &:hover::after {
-    transform: scaleX(1);
-  }
+      &:hover {
+        color: #555;
+      }
+    }
 
-  &:hover {
-    color: #555;
-  }
-}
-
-@media (max-width: 1024px) {
-  .navbar__container {
-    padding: 20px 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar__container {
-    padding: 20px; // dari sebelumnya 32px
-  }
-}
-
-
-
-//resposnive Tablet Navigasi
-    
-    @media (max-width: 768px)
-    
-    {
-      display: none; // Menu disembunyikan di mobile (diganti burger menu)
+    @media (max-width: 768px) {
+      display: none; // Disembunyikan di mobile, pakai burger menu
     }
   }
 
@@ -144,89 +117,57 @@ li a {
       font-family: 'Inter', sans-serif;
       font-size: 14px;
       font-weight: 500;
-      line-height: 1;
       text-decoration: underline;
-      text-decoration-thickness: 1px;
       text-underline-offset: 3px;
       color: #000;
       padding: 8px 12px;
-      height: 37px;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       background: transparent;
       border: none;
-      position: relative;
-      top: -1px; // Penyesuaian kecil supaya teks sejajar tombol
-    }
-.btn--black {
-  background: linear-gradient(180deg, #000, #333);
-  color: #fff;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  height: 37px;
-  padding: 10px 12px;
-  width: 102px;
-  border-radius: 4px;
+      transition: color 0.2s ease, text-decoration-color 0.2s ease;
 
-  // Border gradasi putih lembut
-  border-image: linear-gradient(
-    180deg,
-    rgba(255, 253, 253, 0.573) 0%,
-    rgba(255, 255, 255, 0.07) 100%
-  );
-  border-image-slice: 1;
-
-  // Shadow lembut dan highlight ala Webflow
-  box-shadow:
-    0 0 0 1px rgba(0, 0, 0, 1),               // ▪ garis tepi solid hitam
-    0 0 0 4px rgba(0, 0, 0, 0.05),            // ▪ efek glow luar sangat halus
-    inset 0 10px 12px rgba(255, 255, 255, 0.26); // ▪ highlight putih dalam
-
-  transition: background 0.2s;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  gap: 8px;
-
-  &:hover {
-    background: linear-gradient(180deg, #2b2b2b, #444);
-  }
-
-      @media (max-width: 768px) {
-        // Tombol menyesuaikan ukuran dan padding di layar kecil
-        font-size: 14px;
-        padding: 8px 14px;
-        height: 37px;
-        width: auto;
-        max-width: 100%;
+      &:hover {
+        color: #555;
+        text-decoration-color: #555;
       }
     }
 
-    // RESPONSIVE override
-@media (max-width: 768px) {
-  .navbar__actions {
-    display: flex !important; // ⬅️ pastikan tampil
-    margin-right: 48px;       // ⬅️ beri jarak dari burger
-  }
+    .btn--black {
+      background: linear-gradient(180deg, #000, #333);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      height: 37px;
+      padding: 10px 12px;
+      width: 102px;
+      border-radius: 4px;
+      border: none;
+      box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 1),
+        0 0 0 4px rgba(0, 0, 0, 0.05),
+        inset 0 10px 12px rgba(255, 255, 255, 0.26);
+      transition: background 0.3s ease, transform 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
 
-
-
-      .btn--black {
-        // Ukuran tombol CTA di mobile
-        padding: 8px 14px;
-        font-size: 14px;
+      &:hover {
+        background: linear-gradient(180deg, #2b2b2b, #444);
+        transform: translateY(-1px);
       }
 
-      .navbar__login {
-        // Ukuran font login menyesuaikan ukuran layar
-        font-size: clamp(12px, 1.4vw, 14px); // Responsive font size
+      &:active {
+        transform: translateY(1px);
       }
+    }
+
+    @media (max-width: 768px) {
+      display: none !important;
     }
   }
 
@@ -235,22 +176,7 @@ li a {
     font-size: 24px;
     cursor: pointer;
 
-    @media (max-width: 768px) and (min-width: 641px) {
-  .navbar__actions {
-    display: flex !important;
-    margin-right: 48px;
-  }
-}
-
-@media (max-width: 640px) {
-  .navbar__actions {
-    display: none !important;
-  }
-}
-
-
     @media (max-width: 768px) {
-      // Tampilkan ikon burger di mobile
       display: block;
       position: absolute;
       right: 24px;
@@ -258,10 +184,9 @@ li a {
       color: #1a1a1a;
     }
   }
-  
 
   &__mobile-menu {
-    max-height: 0;        // Default tertutup
+    max-height: 0;
     overflow: hidden;
     padding: 0 24px;
     background-color: #fff;
@@ -276,156 +201,251 @@ li a {
       padding: 0;
       margin: 0;
 
-li a {
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 500;
-  color: #000;
-  position: relative;
-  display: inline-block;
+      li a {
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 500;
+        color: #000;
+        position: relative;
+        display: inline-block;
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 100%;
-    height: 2px;
-    background-color: currentColor;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-  }
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+          width: 100%;
+          height: 2px;
+          background-color: currentColor;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.3s ease;
+        }
 
-  &:hover::after {
-    transform: scaleX(1);
-  }
+        &:hover::after {
+          transform: scaleX(1);
+        }
 
-  &:hover {
-    color: #555;
-  }
-}
+        &:hover {
+          color: #555;
+        }
+      }
+    }
+
+    // Tombol aksi di mobile
+    .navbar__mobile-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 16px;
+
+      .btn--black {
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+      }
+
+      .navbar__login {
+        text-align: center;
+        font-size: 13px;
+        text-decoration: underline;
+      }
     }
 
     &.active {
-      max-height: 260px;  // Terbuka saat menu aktif
+      max-height: 260px;
       padding: 18px 24px;
     }
 
     @media (min-width: 769px) {
-      // Sembunyikan mobile menu saat layar besar
       display: none !important;
     }
   }
 }
 
-@media (max-width: 768px) {
-  .navbar__logo {
-    display: flex;
-    align-items: center; //  vertikal tengah
-    height: 37px;         //  samakan tinggi dengan tombol
-    margin-top: 2px;      // kecilkan perbedaan posisi (opsional)
-  }
+// Responsive untuk 425px - 767px
+@media (min-width: 425px) and (max-width: 767px) {
+  .navbar {
+    &__container {
+      padding: 20px 32px; // padding lebih ramping
+      align-items: center;
+    }
 
-  .navbar__brand {
-    font-size: 18px;
-    line-height: 1;
-    height: auto;         // biar fleksibel
-    display: flex;
-    align-items: center;
-  }
+    &__logo {
+      height: 36px;
+      gap: 6px;
 
-  .navbar__container {
-    padding: 16px 32px;
-    align-items: center; // pastikan semua anaknya sejajar vertikal
+      .navbar__brand {
+        font-size: 18px;
+      }
+    }
+
+    &__menu {
+      display: none; // tetap disembunyikan, gunakan burger menu
+    }
+
+    &__actions {
+      display: none !important; // tombol login & CTA hilang, pindah ke mobile menu
+    }
+
+    &__burger {
+      display: block;
+      position: absolute;
+      right: 24px;
+      top: 20px;
+      font-size: 28px;
+      color: #1a1a1a;
+    }
+
+    &__mobile-menu {
+      padding: 0 20px;
+
+      ul {
+        gap: 18px;
+
+        li a {
+          font-size: 14px;
+        }
+      }
+
+      .navbar__mobile-actions {
+        gap: 14px;
+
+        .btn--black {
+          font-size: 14px;
+          height: 42px;
+        }
+
+        .navbar__login {
+          font-size: 13px;
+        }
+      }
+    }
   }
 }
 
-@media (max-width: 768px) and (min-width: 641px) {
-  .navbar__actions {
-    display: flex !important;
-    margin-right: 48px;
-  }
-}
+// Responsive untuk 375px - 424px
+@media (min-width: 375px) and (max-width: 424px) {
+  .navbar {
+    &__container {
+      padding: 18px 24px; // sedikit lebih sempit dibanding 425-767px
+      align-items: center;
+    }
 
-@media (max-width: 640px) {
-  .navbar__actions {
-    display: none !important;
-  }
-}
-
-
-// mobile responsive M
-@media (max-width: 375px) {
-  .navbar__container {
-    padding: 20px; // dari sebelumnya 14px 20px
-  }
-
-  .navbar__logo {
-    height: 32px; // sedikit lebih kecil
-    gap: 8px; // jarak logo dan teks dikecilkan
-  }
-
-  .navbar__brand {
-    font-size: 16px;
-  }
-
-  .navbar__actions {
-    right: 40px; //  Sesuaikan posisi tombol di layar kecil
-    top: 16px;
-        display: none;
-
-
-    .btn--black {
-      padding: 6px 10px;
-      font-size: 13px;
+    &__logo {
       height: 34px;
+      gap: 6px;
+
+      .navbar__brand {
+        font-size: 17px;
+      }
     }
 
-    .navbar__login {
-      padding: 6px 10px;
-      font-size: 12px;
+    &__menu {
+      display: none; // tetap disembunyikan, burger menu aktif
     }
-  }
 
-  .navbar__burger {
-    right: 16px; // ⬅ geser burger menu ke kiri agar tidak mentok
-    top: 18px;
+    &__actions {
+      display: none !important; // CTA & login disembunyikan, masuk ke mobile menu
+    }
+
+    &__burger {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-size: 26px; // sedikit lebih kecil dibanding 425-767px
+      color: #1a1a1a;
+    }
+
+    &__mobile-menu {
+      padding: 0 18px;
+
+      ul {
+        gap: 16px;
+
+        li a {
+          font-size: 13px;
+        }
+      }
+
+      .navbar__mobile-actions {
+        gap: 12px;
+
+        .btn--black {
+          font-size: 13px;
+          height: 40px;
+        }
+
+        .navbar__login {
+          font-size: 12px;
+        }
+      }
+    }
   }
 }
 
-
-// responsive mobile S
-
-@media (max-width: 320px) {
-  .navbar__container {
-    padding: 16px; // boleh tetap sempit di ukuran sangat kecil
-  }
-  .navbar__brand {
-    font-size: 15px;
-  }
-
-
-  .navbar__actions {
-    display: none;
-  
-    .btn--black {
-      padding: 6px 8px;
-      font-size: 12px;
-      height: 32px;
+// Responsive untuk 320px - 374px
+@media (min-width: 320px) and (max-width: 374px) {
+  .navbar {
+    &__container {
+      padding: 16px 20px; // padding lebih rapat untuk layar kecil
+      align-items: center;
     }
 
-    .navbar__login {
-      font-size: 11px;
-    }
-  }
+    &__logo {
+      height: 30px; // logo lebih kecil
+      gap: 5px;
 
-  .navbar__burger {
-    right: 14px;
-    top: 17px;
+      .navbar__brand {
+        font-size: 15px; // teks brand lebih kecil
+      }
+    }
+
+    &__menu {
+      display: none; // menu utama disembunyikan, gunakan burger menu
+    }
+
+    &__actions {
+      display: none !important; // CTA & login disembunyikan
+    }
+
+    &__burger {
+      display: block;
+      position: absolute;
+      right: 16px;
+      top: 18px;
+      font-size: 24px; // ukuran burger disesuaikan
+      color: #1a1a1a;
+    }
+
+    &__mobile-menu {
+      padding: 0 16px;
+
+      ul {
+        gap: 14px;
+
+        li a {
+          font-size: 12px; // font menu kecil
+        }
+      }
+
+      .navbar__mobile-actions {
+        gap: 10px;
+
+        .btn--black {
+          font-size: 12px;
+          height: 36px;
+          padding: 6px 10px;
+        }
+
+        .navbar__login {
+          font-size: 11px;
+        }
+      }
+    }
   }
 }
-
 
 
 //*Hero her*//
@@ -566,10 +586,10 @@ strong {
   margin-right: 0;
   margin-top: 8px;
   position: relative;
-  z-index: 2;
+  z-index: 1;
   width: 100%;
   max-width: 640px;
-  transform: none;
+    transform: translateX(140px);
 
   &::after {
     content: '';
@@ -641,7 +661,7 @@ strong {
   }
 }
 
-// ✅ LAPTOP KECIL (1024px)
+//  LAPTOP KECIL (1024px)
 @media (max-width: 1024px) {
   .hero {
     padding-top: 60px;
@@ -666,6 +686,8 @@ strong {
     &__image {
       max-width: 100%;
       margin-right: -280px;
+          transform: translateX(0); // tablet dan hp: gambar balik ke posisi normal
+
     }
   }
 }
@@ -681,6 +703,7 @@ strong {
 
   .hero__image {
     margin-right: -120px;
+        transform: translateX(0); // tablet dan hp: gambar balik ke posisi normal
   }
 
   .social-proof .logos {
@@ -688,7 +711,77 @@ strong {
   }
 }
 
-// ✅ TABLET (768px) – Full Width Container
+// ✅ RESPONSIVE TABLET BESAR & LAPTOP KECIL (768px – 1024px)
+@media (min-width: 769px) and (max-width: 1020px) {
+  .hero {
+    padding-top: 56px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    &__container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    &__text {
+      flex: 1;
+      max-width: 100%;
+      gap: 18px;
+    }
+
+    &__title {
+      font-size: 60px;
+      line-height: 110%;
+      word-break: break-word;
+    }
+
+    &__desc {
+      font-size: 17px;
+      line-height: 140%;
+      max-width: 100%;
+    }
+
+    &__image {
+      flex: 1;
+      max-width: 100%;
+      transform: translateX(40px); // sedikit ke kanan, biar tidak nabrak teks
+      margin-top: 0;
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+      }
+    }
+
+    &__buttons {
+      margin-top: 24px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+
+      a.btn,
+      .btn {
+        font-size: 15px;
+        padding: 14px 24px;
+      }
+    }
+
+    &__note {
+      font-size: 14px;
+      margin-top: 12px;
+    }
+  }
+}
+
+
+//  TABLET (768px) – Full Width Container
 @media (max-width: 768px) {
   // 2. Hero Section
   .hero {
@@ -744,6 +837,8 @@ strong {
     &__image {
       margin-right: 0;
       max-width: 100%;
+          transform: translateX(0); // tablet dan hp: gambar balik ke posisi normal
+
     }
   }
 
@@ -772,6 +867,77 @@ strong {
       max-width: 100%;
       height: auto;
       object-fit: contain; // agar tidak pecah atau lonjong
+    }
+  }
+}
+
+//  RESPONSIVE TABLET & MOBILE (425px - 768px)
+@media (min-width: 425px) and (max-width: 760px) {
+  .hero {
+    padding-top: 48px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    &__container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 28px;
+      max-width: 100%;
+      width: 100%;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    &__title {
+      font-size: 60px;
+      line-height: 110%;
+      word-break: break-word;
+    }
+
+    &__desc {
+      font-size: 16px;
+      line-height: 150%;
+      max-width: 100%;
+    }
+
+    &__text {
+      gap: 20px;
+      max-width: 100%;
+      margin-bottom: 12px;
+    }
+
+    &__image {
+      align-self: center;
+      margin-top: 24px;
+      max-width: 100%;
+      transform: translateX(0);
+      img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 14px;
+      width: 100%;
+
+      a.btn,
+      .btn {
+        width: 100% !important;
+        max-width: 100%;
+        text-align: center;
+        font-size: 15px;
+        padding: 14px 24px;
+      }
+    }
+
+    &__note {
+      font-size: 14px;
+      line-height: 1.5;
     }
   }
 }
@@ -873,6 +1039,138 @@ strong {
     }
   }
 }
+
+// ✅ RESPONSIVE MOBILE SEDANG (376px – 424px)
+@media (min-width: 376px) and (max-width: 424px) {
+  .hero {
+    padding-top: 38px;
+
+    &__container {
+      padding: 0 18px;
+      gap: 24px;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &__text {
+      gap: 18px;
+      max-width: 100%;
+    }
+
+    &__title {
+      font-size: 42px;
+      line-height: 110%;
+      word-break: break-word;
+    }
+
+    &__desc {
+      font-size: 15px;
+      line-height: 150%;
+      max-width: 100%;
+    }
+
+    &__buttons {
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      align-items: stretch;
+
+      a.btn,
+      .btn {
+        font-size: 14px;
+        padding: 12px 20px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    &__note {
+      font-size: 13px;
+      line-height: 18px;
+      max-width: 100%;
+    }
+
+    &__image {
+      margin-top: 24px;
+      width: 100%;
+      max-width: 100%;
+      align-self: center;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+// ✅ RESPONSIVE MOBILE KECIL (321px – 374px)
+@media (min-width: 321px) and (max-width: 374px) {
+  .hero {
+    padding-top: 32px;
+
+    &__container {
+      padding: 0 14px;
+      gap: 20px;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &__text {
+      gap: 16px;
+      max-width: 100%;
+    }
+
+    &__title {
+      font-size: 38px;
+      line-height: 115%;
+      word-break: break-word;
+    }
+
+    &__desc {
+      font-size: 14px;
+      line-height: 145%;
+      max-width: 100%;
+    }
+
+    &__buttons {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      align-items: stretch;
+
+      a.btn,
+      .btn {
+        font-size: 13px;
+        padding: 12px 18px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    &__note {
+      font-size: 12px;
+      line-height: 16px;
+      max-width: 100%;
+    }
+
+    &__image {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 100%;
+      align-self: center;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+
 @media (max-width: 320px) {
   .hero {
     padding-top: 28px;
@@ -1518,7 +1816,6 @@ strong {
     background: #C2C2C21C; //  Warna latar abu terang untuk kontras dengan teks/gambar
     border: 1px solid #E4E4E4; //  Border halus agar tampak modern dan mirip Webflow
     border-radius: 8px; // Sudut sedikit membulat, memberi kesan lembut
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); //  Efek bayangan halus agar elemen tampak mengambang
     overflow: hidden; //  Cegah konten keluar dari area wrapper (misalnya gambar lebih besar)
     padding: 24px 24px 32px; //  Padding isi: atas & samping 24px, bawah 32px (untuk jarak ekstra ke caption)
 
