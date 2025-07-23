@@ -243,10 +243,11 @@ html, body {
         width: 100%;
         height: 40px;
         font-size: 14px;
+        
       }
 
       .navbar__login {
-        text-align: center;
+        text-align: left;
         font-size: 13px;
         text-decoration: underline;
       }
@@ -1173,8 +1174,7 @@ strong {
 
 @media (max-width: 320px) {
   .hero {
-    padding-top: 28px;
-  }
+        padding: 5px 28px;  }
 
   .hero__container {
     padding: 0 12px;
@@ -1248,7 +1248,7 @@ strong {
 .logos {
   flex: 0 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 0fr);
   gap: 32px;
   justify-items: end;
   padding-top: 12px;
@@ -1404,7 +1404,7 @@ strong {
 
   // === Mobile S (≤320px) === //
   @media (max-width: 320px) {
-    padding: 0px 12px;
+    padding: 28px;
 
     .text {
       .title {
@@ -1598,129 +1598,174 @@ strong {
       flex-direction: row-reverse;
     }
   }
-}
-
-
-
-// Responsive mobile
-@media (max-width: 640px){
-  .social-proof {
-    padding: 48px 24px; // pastikan social dan features punya padding yang sama
-  }
-  .features {
-    padding: 48px 24px; // disamakan dengan .social-proof
-    gap: 40px; // jarak antar feature di mobile
-  }
-  .features .feature,
-  .features .feature.reverse {
-    flex-direction: column; // stack vertikal
-    align-items: flex-start; // teks rata kiri
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    gap: 32px; // jarak antar image dan konten
-  }
-
-  .features .feature__image,
-  .features .feature__content {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .features .feature__image img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto; // center image secara horizontal
-  }
-
-  .features .feature__content {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .features .feature__content h3 {
-    font-size: 24px;
-    line-height: 1.4;
-    letter-spacing: -0.4px;
-    text-align: left;
-    margin: 0;
-  }
-
-  .features .feature__content p {
-    font-size: 15px;
-    line-height: 1.6;
-    text-align: left;
-    margin: 0;
-  }
-
-  .features .feature__content .btn {
-    font-size: 14px;
   }
 }
-}
 
+// === Tablet (≤768px) === //
 @media (max-width: 768px) {
- .features {
-    padding: 48px 24px;
+  .features {
+    padding: 56px 24px; // kiri-kanan sama dengan social-proof di tablet
+    gap: 48px;
 
-  }
-
- .feature,
-   .feature.reverse {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  .features .feature__content,
-  .features .feature__image {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .features .feature,
-  .features .feature.reverse {
-    flex-direction: column-reverse; // 
-    align-items: flex-start;
-    gap: 32px;
-    padding: 0;
-    margin: 0;
-  }
-
-  .features .feature__content,
-  .features .feature__image {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .features .feature__image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .features .feature__content {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-
-    h3 {
-      font-size: 28px;
-      line-height: 1.4;
-      text-align: left;
+    .features__container {
+      padding: 0; // hapus padding bawaan desktop
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
     }
 
-    p {
-      font-size: 16px;
-      line-height: 1.6;
+    .feature,
+    .feature.reverse {
+      display: flex;
+      flex-direction: column; // teks dulu, gambar di bawah
+      align-items: flex-start;
       text-align: left;
+      gap: 32px;
+      width: 100%;
+      margin: 0;
+      padding: 0;
     }
 
-    .btn {
-      font-size: 14px;
-      align-self: flex-start;
+    .feature__content,
+    .feature__image {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .feature__content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      h3 {
+        font-size: 32px;
+        line-height: 1.4;
+        margin: 0;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      .btn {
+        font-size: 14px;
+        align-self: flex-start;
+      }
+    }
+
+    .feature__image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+// === Tablet (≤768px) === //
+@media (max-width: 768px) {
+  .features {
+    padding: 56px 52px; // kiri-kanan sama dengan social-proof
+    gap: 48px;
+
+    .features__container {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .feature,
+    .feature.reverse {
+      display: flex;
+      flex-direction: column-reverse; // teks di atas, gambar di bawah
+      align-items: flex-start;
+      text-align: left;
+      gap: 32px;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .feature__content,
+    .feature__image {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .feature__content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      h3 {
+        font-size: 32px;
+        line-height: 1.4;
+        margin: 0;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      .btn {
+        font-size: 14px;
+        align-self: flex-start;
+      }
+    }
+
+    .feature__image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+// === Mobile S (≤320px) === //
+@media (max-width: 320px) {
+  .features {
+    padding: 56px 28px; // atas-bawah 56px, kanan-kiri 28px agar sejajar dengan atas
+    gap: 40px;
+
+    .features__container {
+      padding: 0;
+      gap: 40px;
+    }
+
+    .feature,
+    .feature.reverse {
+      flex-direction: column-reverse; // teks di atas, gambar di bawah
+      gap: 28px;
+      padding: 0;
+    }
+
+    .feature__content {
+      gap: 14px;
+
+      h3 {
+        font-size: 24px;
+        line-height: 1.3;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .btn {
+        font-size: 13px;
+      }
+    }
+
+    .feature__image img {
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
     }
   }
 }
@@ -1893,7 +1938,7 @@ strong {
 }
 @media (max-width: 768px) {
   .advantages-section {
-    padding: 48px 24px;
+    padding: 48px 30px;
 
     .section-title {
       font-size: 32px;
@@ -2698,7 +2743,7 @@ margin-bottom: 0; // Hindari margin negatif
     .footer-top {
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: center;
+  justify-content: flex-start; // rata kiri sesuai feedback
       gap: 32px;
     }
 
