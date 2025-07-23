@@ -1349,11 +1349,12 @@ html, body {
      object-fit: contain;
   opacity: 1;
 }
+
 @media (max-width: 1024px) {
   .social-proof {
     padding: 64px 48px;
   }
-  .social-proof .container {
+  .social-proof .social-proof__container {
     flex-direction: column;
     align-items: flex-start;
     gap: 32px;
@@ -1385,7 +1386,7 @@ html, body {
     padding-top: 0;
   }
   .social-proof .logos img {
-    height: 52xpx;
+    height: 52px;
     max-width: 120px;
   }
 }
@@ -1445,18 +1446,24 @@ html, body {
     max-width: 100px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .social-proof {
-    padding: 40px 20px;
+    padding: 32px 40px;
+    /* ↑↓ atas-bawah: 32px, ←→ kiri-kanan: 20px */
   }
   .social-proof .text .title {
     font-size: 28px;
+    line-height: 130%;
   }
   .social-proof .text .subtitle {
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 1.5;
   }
   .social-proof .logos {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
     gap: 16px 24px;
+    justify-items: start;
   }
   .social-proof .logos img {
     height: 44px;
@@ -1481,7 +1488,6 @@ html, body {
     max-width: 80px;
   }
 }
-
 .features {
   background-color: #F9F9F9;
   padding: 148px 0;
@@ -3696,11 +3702,12 @@ html, body {
      object-fit: contain;
   opacity: 1;
 }
+
 @media (max-width: 1024px) {
   .social-proof {
     padding: 64px 48px;
   }
-  .social-proof .container {
+  .social-proof .social-proof__container {
     flex-direction: column;
     align-items: flex-start;
     gap: 32px;
@@ -3732,7 +3739,7 @@ html, body {
     padding-top: 0;
   }
   .social-proof .logos img {
-    height: 52xpx;
+    height: 52px;
     max-width: 120px;
   }
 }
@@ -3792,18 +3799,24 @@ html, body {
     max-width: 100px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .social-proof {
-    padding: 40px 20px;
+    padding: 32px 40px;
+    /* ↑↓ atas-bawah: 32px, ←→ kiri-kanan: 20px */
   }
   .social-proof .text .title {
     font-size: 28px;
+    line-height: 130%;
   }
   .social-proof .text .subtitle {
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 1.5;
   }
   .social-proof .logos {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
     gap: 16px 24px;
+    justify-items: start;
   }
   .social-proof .logos img {
     height: 44px;
@@ -3828,7 +3841,6 @@ html, body {
     max-width: 80px;
   }
 }
-
 .features {
   background-color: #F9F9F9;
   padding: 148px 0;

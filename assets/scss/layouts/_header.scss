@@ -1204,20 +1204,19 @@ strong {
 
 
 
-
 // === SOCIAL PROOF COMPONENT (Responsive & Clean Structure) === //
 
 .social-proof {
   background: #fff;
   padding: 96px 80px;
-        max-width: 1440px;
+  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
 
- .social-proof__container {
+  .social-proof__container {
     display: flex;
     align-items: center;
-      width: 100%;
+    width: 100%;
     justify-content: space-between;
     gap: 40px;
     flex-wrap: wrap;
@@ -1245,29 +1244,32 @@ strong {
     }
   }
 
-.logos {
-  flex: 0 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 0fr);
-  gap: 32px;
-  justify-items: end;
-  padding-top: 12px;
-  min-width: 280px;
-  max-width: 100%;
+  .logos {
+    flex: 0 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    gap: 32px;
+    justify-items: end;
+    padding-top: 12px;
+    min-width: 280px;
+    max-width: 100%;
 
-  img {
-    height: 48px;
-    object-fit: contain;
-    opacity: 1;
+    img {
+      height: 48px;
+      object-fit: contain;
+      opacity: 1;
+    }
   }
 }
 
+// === Responsive Breakpoints === //
 
-
-  @media (max-width: 1024px) {
+// Tablet (≤1024px)
+@media (max-width: 1024px) {
+  .social-proof {
     padding: 64px 48px;
 
-    .container {
+    .social-proof__container {
       flex-direction: column;
       align-items: flex-start;
       gap: 32px;
@@ -1303,58 +1305,61 @@ strong {
       padding-top: 0;
 
       img {
-        height: 52xpx;
+        height: 52px;
         max-width: 120px;
       }
     }
   }
+}
 
-  // === Tablet (≤768px) === //
+// Tablet (≤768px)
 @media (max-width: 768px) {
-  padding: 56px 56px;
+  .social-proof {
+    padding: 56px 56px;
 
-  .social-proof__container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 32px;
-  }
-
-  .text {
-    width: 100%;
-    max-width: 100%;
-
-    .title {
-      font-size: 36px;
-      line-height: 130%;
-      word-break: break-word;
+    .social-proof__container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
     }
 
-    .subtitle {
-      font-size: 16px;
-      line-height: 150%;
-      color: #6c6c6c;
-      margin-top: 8px;
+    .text {
+      width: 100%;
+      max-width: 100%;
+
+      .title {
+        font-size: 36px;
+        line-height: 130%;
+        word-break: break-word;
+      }
+
+      .subtitle {
+        font-size: 16px;
+        line-height: 150%;
+        color: #6c6c6c;
+        margin-top: 8px;
+      }
     }
-  }
 
-  .logos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: start;
-    gap: 24px 32px;
-    width: 100%;
-    padding-top: 0;
+    .logos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: start;
+      gap: 24px 32px;
+      width: 100%;
+      padding-top: 0;
 
-    img {
-      height: 48px;
-      max-width: 100px;
+      img {
+        height: 48px;
+        max-width: 100px;
+      }
     }
   }
 }
 
-
-  // === Mobile L (≤425px) === //
-  @media (max-width: 425px) {
+// Mobile L (≤425px)
+@media (max-width: 425px) {
+  .social-proof {
     padding: 48px 24px;
 
     .text {
@@ -1377,23 +1382,31 @@ strong {
       }
     }
   }
+}
 
-  // === Mobile M (≤375px) === //
-  @media (max-width: 375px) {
-    padding: 40px 20px;
+// Mobile M (≤375px)
+@media (max-width: 376px) {
+  .social-proof {
+    padding: 32px 40px; 
+    /* ↑↓ atas-bawah: 32px, ←→ kiri-kanan: 20px */
 
     .text {
       .title {
         font-size: 28px;
+        line-height: 130%;
       }
 
       .subtitle {
-        font-size: 13px;
+        font-size: 14px;
+        line-height: 1.5;
       }
     }
 
     .logos {
+      display: grid;
+      grid-template-columns: repeat(3, 0fr);
       gap: 16px 24px;
+      justify-items: start;
 
       img {
         height: 44px;
@@ -1401,9 +1414,11 @@ strong {
       }
     }
   }
+}
 
-  // === Mobile S (≤320px) === //
-  @media (max-width: 320px) {
+// Mobile S (≤320px)
+@media (max-width: 320px) {
+  .social-proof {
     padding: 28px;
 
     .text {
@@ -1426,8 +1441,7 @@ strong {
     }
   }
 }
-
-// === END SOCIAL PROOF === //
+ //end social//
 
 //* Bagian Feanture 
 .features {
